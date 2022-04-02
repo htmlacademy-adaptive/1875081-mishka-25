@@ -1,7 +1,7 @@
 # Личный проект «Мишка» 
 
-* Студент: [Алёна Приходченко](https://up.htmlacademy.ru/adaptive/25/user/1875081).
-* Наставник: [Микаел Магтесян] (https://htmlacademy.ru/profile/id1100875).
+* Студент: [Алёна Приходченко](https://htmlacademy.ru/profile/ezoflin).
+* Наставник: [Микаел Магтесян](https://htmlacademy.ru/profile/id1100875).
 
 ---
 
