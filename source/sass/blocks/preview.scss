@@ -1,0 +1,6 @@
+@import "./default-variables.scss";
+
+.preview {
+  @include outline();
+  background-color: $color-bg;
+}

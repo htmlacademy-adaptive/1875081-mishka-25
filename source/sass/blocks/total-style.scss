@@ -1,3 +1,5 @@
+@import "./default-variables.scss";
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -21,4 +23,6 @@
   min-height: 100%;
   margin: 0;
   padding: 0;
+
+  @include fonts(400);
 }

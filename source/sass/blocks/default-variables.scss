@@ -1,0 +1,24 @@
+$color-general: #000000;
+$color-secondary: #444444;
+$color-bg: #f1f1f1;
+$color-primary-accent: #63d1bb;
+$color-secondary-accent: #56c3b2;
+$color-social: #231f20;
+
+@mixin fonts ($weight: 400, $fs: 17px, $color: $color-general) {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: $fs;
+  font-weight: $weight;
+  font-style: normal;
+  color: $color;
+}
+
+@mixin reset-list() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin outline() {
+  outline: 1px solid #79140b;
+}
