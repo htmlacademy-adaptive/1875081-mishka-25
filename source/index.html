@@ -52,7 +52,7 @@
   <main class="main">
     <h1 class="visually-hidden">Интернет-магазин товаров ручной работы "Мишка".</h1>
 
-    <section class="preview">
+    <section class="preview main-preview">
       <h2 class="preview__title">
         Милые штуки ручной работы для дома
       </h2>
@@ -69,7 +69,7 @@
     <section class="product-card">
       <h2 class="visually-hidden">Карточка товара недели.</h2>
       <div class="product-card__container">
-        <h3 class="product-card__title main-title">Вязаные корзинки</h3>
+        <h3 class="product-card__title">Вязаные корзинки</h3>
         <p class="product-card__text">Товар недели</p>
         <p class="product-card__description">Экологически чистая пряжа,
           ручная работа. Доступны в шести расцветках и трёх размерах.</p>
@@ -95,7 +95,7 @@
 
     <section class="about">
       <div class="about__container">
-        <h2 class="about__title main-title">Коротко о нас:</h2>
+        <h2 class="about__title">Коротко о нас:</h2>
         <ul class="about__list">
           <li class="about__item about__item--eco">Экологически чистые материалы</li>
           <li class="about__item about__item--style">Скандинавский стиль по российской цене</li>
@@ -109,7 +109,7 @@
 
     <section class="reviews">
       <div class="reviews__container">
-        <h2 class="reviews__title main-title">Отзывы</h2>
+        <h2 class="reviews__title">Отзывы</h2>
         <div class="reviews__slider slider">
           <ul class="slider__list">
             <li class="slider__item">
@@ -135,7 +135,7 @@
 
     <section class="contacts">
       <div class="contacts__container">
-        <h2 class="contacts__title main-title">Контакты</h2>
+        <h2 class="contacts__title">Контакты</h2>
         <div class="contacts__wrapper">
           <p class="contacts__description">
             <span class="contacts__name">e-mail:</span>
@@ -189,30 +189,28 @@
     </div>
   </footer>
 
-  <div class="modal">
+  <div class="modal modal-close">
     <div class="modal__content">
-      <div class="modal__container">
-        <h2 class="modal__title main-title">Добавить в корзину</h2>
-        <form action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="modal__wrapper">
-            <legend class="modal__name">
+      <h2 class="modal__title">Добавить в корзину</h2>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="modal__wrapper">
+          <legend class="modal__name">
+            <label class="modal__label">
+              <span class="modal__value">S</span>
+              <input class="modal__input" type="radio" name="size" value="S">
+            </label>
               <label class="modal__label">
-                <span class="modal__value">S</span>
-                <input class="modal__input" type="radio" name="size" value="S">
+                <span class="modal__value">M</span>
+                <input class="modal__input" type="radio" name="size" value="M">
               </label>
-                <label class="modal__label">
-                  <span class="modal__value">M</span>
-                  <input class="modal__input" type="radio" name="size" value="M">
-                </label>
-                <label class="modal__label">
-                  <span class="modal__value">L</span>
-                  <input class="modal__input" type="radio" name="size" value="L">
-                </label>
-            </legend>
-          </fieldset>
-          <button class="modal__button button" type="submit">Добавить</button>
-        </form>
-      </div>
+              <label class="modal__label">
+                <span class="modal__value">L</span>
+                <input class="modal__input" type="radio" name="size" value="L">
+              </label>
+          </legend>
+        </fieldset>
+        <button class="modal__button button" type="submit">Добавить</button>
+      </form>
     </div>
   </div>
 </body>
