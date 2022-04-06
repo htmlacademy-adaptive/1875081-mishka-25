@@ -1,1 +1,37 @@
 @import "./default-variables.scss";
+
+.product-card {
+  @include outline();
+}
+
+.product-card__container {
+  width: 260px;
+  margin: 0 auto;
+}
+
+.product-card__title {
+  margin: 0;
+
+  @include fonts(700, 25px);
+  line-height: 120%;
+}
+
+.product-card__text {
+  margin: 0;
+
+  @include fonts(700, 17px, $color-light-accent);
+  text-transform: uppercase;
+  line-height: 118%;
+}
+
+.product-card__description {
+  margin: 0;
+
+  @include fonts(400, 15px, $color-secondary);
+  line-height: 160%;
+}
+
+.product-card__price {
+  @include fonts(700, 17px, $color-secondary);
+  text-align: center;
+}

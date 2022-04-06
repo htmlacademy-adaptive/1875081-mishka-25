@@ -89,7 +89,9 @@
         </dl>
         <img class="product-card__image" src="./img/content/product-week.jpg" width="260" height="315" alt="Товар недели: вязаные корзинки.">
         <p class="product-card__price">Цена: <span class="product-card__value">990 руб.</span></p>
-        <button class="product-card__button button" type="button">Заказать</button>
+        <button class="product-card__button button" type="button">
+          <span class="button__text">Заказать</span>
+        </button>
       </div>
     </section>
 
@@ -116,7 +118,7 @@
               <blockquote class="slider__content">
                 <p class="slider__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
                 <cite class="slider__author">Анастасия Красильникова</cite>
-                <a class="slider__author-social">@misssssiskras</a>
+                <a class="slider__author-social" href="#">@misssssiskras</a>
               </blockquote>
             </li>
           </ul>
@@ -129,7 +131,9 @@
             </button>
           </p>
         </div>
-        <a class="reviews__button button" href="#">Написать</a>
+        <a class="reviews__button button" href="#">
+          <span class="button__text">Написать</span>
+        </a>
       </div>
     </section>
 
@@ -148,10 +152,11 @@
         </div>
       </div>
       <div class="contacts__map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003165!2d30.320858716173472!3d59.938719169054075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x62740c0ffcd8a91f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsIDEwMSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MTE4Ng!5e0!3m2!1sru!2sru!4v1648803635626!5m2!1sru!2sru" width="600" height="450" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+        <img class="contacts-map__image" src="./img/content/map-image.jpg" width="320" height="455" alt="Как нас найти.">
       </div>
-      <a class="contacts__button button" href="#">Напишите нам</a>
+      <a class="contacts__button button" href="#">
+        <span class="button__text">Напишите нам</span>
+      </a>
     </section>
   </main>
 
@@ -194,20 +199,19 @@
       <h2 class="modal__title">Добавить в корзину</h2>
       <form action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="modal__wrapper">
-          <legend class="modal__name">
+          <legend class="modal__name">Выберите размер:</legend>
             <label class="modal__label">
               <span class="modal__value">S</span>
-              <input class="modal__input" type="radio" name="size" value="S">
+              <input class="modal__input visually-hidden" type="radio" name="size" value="S" checked>
             </label>
               <label class="modal__label">
                 <span class="modal__value">M</span>
-                <input class="modal__input" type="radio" name="size" value="M">
+                <input class="modal__input visually-hidden" type="radio" name="size" value="M">
               </label>
               <label class="modal__label">
                 <span class="modal__value">L</span>
-                <input class="modal__input" type="radio" name="size" value="L">
+                <input class="modal__input visually-hidden" type="radio" name="size" value="L">
               </label>
-          </legend>
         </fieldset>
         <button class="modal__button button" type="submit">Добавить</button>
       </form>

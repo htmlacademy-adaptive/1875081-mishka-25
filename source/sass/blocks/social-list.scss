@@ -1,1 +1,8 @@
 @import "./default-variables.scss";
+
+.social-list {
+  @include outline();
+
+  display: flex;
+  border-bottom: 1px solid #e5e5e5;
+}

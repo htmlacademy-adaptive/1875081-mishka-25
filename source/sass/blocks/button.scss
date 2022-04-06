@@ -1,1 +1,18 @@
 @import "./default-variables.scss";
+
+.button {
+  @include outline;
+
+  padding: 16px 70px;
+
+  @include fonts(700, 18px, $color-secondary);
+  line-height: 111%;
+  text-transform: uppercase;
+
+  background-color: #ffffff;
+  border: 2px solid $color-secondary;
+}
+
+.button__text {
+  padding: 10px;
+}

@@ -1,1 +1,49 @@
 @import "./default-variables.scss";
+
+.contacts {
+  @include outline;
+}
+
+.contacts__container {
+  width: 260px;
+  margin: 0 auto;
+}
+
+.contacts__title {
+  margin: 0;
+
+  @include fonts(700, 25px);
+  line-height: 120%;
+}
+
+.contacts__description {
+  display: flex;
+
+  @include fonts(400, 14px, $color-secondary);
+  line-height: 214%;
+}
+
+.contacts__name {
+  display: block;
+  width: 76px;
+}
+
+.contacts__link {
+  width: 183px;
+
+  @include fonts(400, 14px, $color-secondary);
+  line-height: 214%;
+
+  text-decoration: none;
+}
+
+.contacts__text {
+  margin: 0;
+  width: 183px;
+}
+
+.contacts__button {
+  display: block;
+  text-decoration: none;
+}
+

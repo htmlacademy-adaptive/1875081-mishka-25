@@ -2,5 +2,13 @@
 
 .preview {
   @include outline();
+  padding: 0 30px;
   background-color: $color-bg;
+}
+
+.preview__title {
+  margin: 0;
+
+  @include fonts(700, 27px);
+  line-height: 111%;
 }

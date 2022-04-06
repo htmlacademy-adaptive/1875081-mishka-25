@@ -1,8 +1,8 @@
 $color-general: #000000;
 $color-secondary: #444444;
 $color-bg: #f1f1f1;
-$color-primary-accent: #63d1bb;
-$color-secondary-accent: #56c3b2;
+$color-light-accent: #63d1bb;
+$color-dark-accent: #56c3b2;
 $color-social: #231f20;
 
 @mixin fonts ($weight: 400, $fs: 17px, $color: $color-general) {
