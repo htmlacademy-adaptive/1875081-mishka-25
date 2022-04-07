@@ -1,18 +1,21 @@
-@import "./default-variables.scss";
+@import "../modules.scss";
+@import "../mixins.scss";
 
 .button {
   @include outline;
 
-  padding: 16px 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  padding: 17px 30px;
 
   @include fonts(700, 18px, $color-secondary);
-  line-height: 111%;
   text-transform: uppercase;
+  text-decoration: none;
 
   background-color: #ffffff;
   border: 2px solid $color-secondary;
-}
-
-.button__text {
-  padding: 10px;
+  box-sizing: border-box;
 }

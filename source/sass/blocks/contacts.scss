@@ -1,26 +1,20 @@
-@import "./default-variables.scss";
+@import "../modules.scss";
+@import "../mixins.scss";
 
 .contacts {
   @include outline;
 }
 
-.contacts__container {
-  width: 260px;
-  margin: 0 auto;
-}
-
 .contacts__title {
   margin: 0;
 
-  @include fonts(700, 25px);
-  line-height: 120%;
+  @include fonts(700, 25px, $color-general, 120%);
 }
 
 .contacts__description {
   display: flex;
 
-  @include fonts(400, 14px, $color-secondary);
-  line-height: 214%;
+  @include fonts(400, 14px, $color-secondary, 214%);
 }
 
 .contacts__name {
@@ -31,8 +25,7 @@
 .contacts__link {
   width: 183px;
 
-  @include fonts(400, 14px, $color-secondary);
-  line-height: 214%;
+  @include fonts(400, 14px, $color-secondary, 214%);
 
   text-decoration: none;
 }
@@ -40,9 +33,4 @@
 .contacts__text {
   margin: 0;
   width: 183px;
-}
-
-.contacts__button {
-  display: block;
-  text-decoration: none;
 }

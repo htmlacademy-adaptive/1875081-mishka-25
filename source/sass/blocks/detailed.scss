@@ -1,12 +1,12 @@
-@import "./default-variables.scss";
+@import "../modules.scss";
+@import "../mixins.scss";
 
 .detailed__wrapper {
   display: flex;
   padding: 12px 0;
   border-bottom: 1px solid #ececec;
 
-  @include fonts(400, 15px, $color-secondary);
-  line-height: 133%;
+  @include fonts(400, 15px, $color-secondary, 133%);
 }
 
 .detailed__name {

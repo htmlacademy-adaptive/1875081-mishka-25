@@ -1,12 +1,6 @@
-@import "./default-variables.scss";
+@import "../modules.scss";
+@import "../mixins.scss";
 
 .catalog {
   @include outline();
-}
-
-.catalog__list {
-  @include reset-list();
-
-  width: 260px;
-  margin: 0 auto;
 }

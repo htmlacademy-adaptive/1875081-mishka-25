@@ -1,4 +1,5 @@
-@import "./default-variables.scss";
+@import "../modules.scss";
+@import "../mixins.scss";
 
 .contacts-map__image {
   display: inline-block;

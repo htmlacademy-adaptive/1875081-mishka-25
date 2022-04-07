@@ -1,24 +1,16 @@
-@import "./default-variables.scss";
+@import "../modules.scss";
+@import "../mixins.scss";
 
 .reviews {
   @include outline;
 }
 
 .reviews__container {
-  width: 260px;
-  margin: 0 auto;
   margin-bottom: 38px;
 }
 
 .reviews__title {
   margin: 0;
 
-  @include fonts(700, 25px);
-  line-height: 120%;
-}
-
-.reviews__button {
-  display: block;
-  margin-bottom: 45px;
-  text-decoration: none;
+  @include fonts(700, 25px, $color-general, 120%);
 }

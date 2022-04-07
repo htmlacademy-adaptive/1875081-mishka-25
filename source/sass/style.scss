@@ -1,5 +1,8 @@
-@use "./blocks/fonts.scss";
-@use "./blocks/total-style.scss";
+@use "./modules.scss";
+@use "./fonts.scss";
+@use "./blocks/reset-list.scss";
+@use "./blocks/container.scss";
+@use "./blocks/page.scss";
 @use "./blocks/header.scss";
 @use "./blocks/main-nav.scss";
 @use "./blocks/main.scss";
@@ -23,3 +26,16 @@
 @use "./blocks/process.scss";
 @use "./blocks/forms.scss";
 @use "./blocks/form.scss";
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

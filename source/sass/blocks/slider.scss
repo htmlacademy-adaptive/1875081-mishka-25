@@ -1,11 +1,10 @@
-@import "./default-variables.scss";
+@import "../modules.scss";
+@import "../mixins.scss";
 
 .slider__list {
-  @include reset-list();
   margin-bottom: 30px;
 
-  @include fonts(400, 15px, $color-secondary);
-  line-height: 200%;
+  @include fonts(400, 15px, $color-secondary, 200%);
 }
 
 .slider__content {
@@ -13,8 +12,7 @@
 }
 
 .slider__author {
-  @include fonts(700, 17px);
-  line-height: 141%;
+  @include fonts(700, 17px, $color-general, 141%);
 }
 
 .slider__author-social {

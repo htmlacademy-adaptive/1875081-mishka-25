@@ -1,31 +1,23 @@
-@import "./default-variables.scss";
+@import "../modules.scss";
+@import "../mixins.scss";
 
 .about {
   @include outline;
 }
 
-.about__container {
-  width: 260px;
-  margin: 0 auto;
-}
-
 .about__title {
   margin: 0;
 
-  @include fonts(700, 25px);
-  line-height: 120%;
+  @include fonts(700, 25px, 120%);
 }
 
 .about__list {
   display: grid;
   gap: 30px;
-
-  @include reset-list();
 }
 
 .about__item {
   padding-top: 45px;
 
-  @include fonts(700, 17px);
-  line-height: 118%;
+  @include fonts(700, 17px, 118%);
 }

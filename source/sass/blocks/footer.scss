@@ -1,14 +1,8 @@
-@import "./default-variables.scss";
+@import "../modules.scss";
+@import "../mixins.scss";
 
 .footer {
   @include outline();
-}
 
-.footer__container {
-  width: 260px;
-  margin: 0 auto;
-}
-
-.footer__social {
-  @include reset-list();
+  background-color: $color-bg;
 }

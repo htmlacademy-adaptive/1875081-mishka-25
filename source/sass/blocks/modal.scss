@@ -1,4 +1,5 @@
-@import "./default-variables.scss";
+@import "../modules.scss";
+@import "../mixins.scss";
 
 .modal__content {
   @include outline;
@@ -8,8 +9,7 @@
 .modal__title {
   margin: 0;
 
-  @include fonts(700, 25px);
-  line-height: 120%;
+  @include fonts(700, 25px, $color-general, 120%);
   text-transform: uppercase;
 }
 
@@ -25,8 +25,7 @@
 }
 
 .modal__name {
-  @include fonts(400, 15px, $color-secondary);
-  line-height: 200%;
+  @include fonts(400, 15px, $color-secondary, 200%);
 }
 
 .modal__label {
