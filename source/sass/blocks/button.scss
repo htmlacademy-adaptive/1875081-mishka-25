@@ -1,0 +1,18 @@
+.button {
+  @include outline;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  padding: 17px 30px;
+
+  @include fonts(700, 18px, $color-secondary);
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: #ffffff;
+  border: 2px solid $color-secondary;
+  box-sizing: border-box;
+}

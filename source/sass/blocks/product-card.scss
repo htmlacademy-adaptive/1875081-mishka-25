@@ -1,0 +1,27 @@
+.product-card {
+  @include outline();
+}
+
+.product-card__title {
+  margin: 0;
+
+  @include fonts(700, 25px, $color-general, 120%);
+}
+
+.product-card__text {
+  margin: 0;
+
+  @include fonts(700, 17px, $color-light-accent, 118%);
+  text-transform: uppercase;
+}
+
+.product-card__description {
+  margin: 0;
+
+  @include fonts(400, 15px, $color-secondary, 160%);
+}
+
+.product-card__price {
+  @include fonts(700, 17px, $color-secondary);
+  text-align: center;
+}

@@ -1,0 +1,46 @@
+.modal__content {
+  @include outline;
+  padding: 30px 30px 46px 30px;
+}
+
+.modal__title {
+  margin: 0;
+
+  @include fonts(700, 25px, $color-general, 120%);
+  text-transform: uppercase;
+}
+
+.modal__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.modal__name {
+  @include fonts(400, 15px, $color-secondary, 200%);
+}
+
+.modal__label {
+  display: inline-block;
+  box-sizing: border-box;
+
+  padding: 18px 19px;
+  border: 2px solid $color-secondary;
+}
+
+.modal__value {
+  padding: 0 10px;
+
+  @include fonts(700, 17px, $color-secondary);
+}
+
+.modal__button {
+  background-color: $color-light-accent;
+  border-color: transparent;
+  color: #ffffff;
+}

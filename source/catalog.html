@@ -2,21 +2,22 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Каталог товаров</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="page__body">
   <header class="header">
-    <div class="header__container">
+    <div class="header__container container">
       <a class="header__logo" href="./index.html">
         <img class="header__logo-image" src="./img/content/mishka-logo-mobile.svg" width="86" height="35" alt="Магазин игрушек ручной работы Мишка." >
       </a>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню.</span>
+        <button class="main-nav__toggle main-nav__toggle--close" type="button">
+          <span class="main-nav__decor-line">
+            <span class="visually-hidden">Открыть меню.</span>
+          </span>
         </button>
-        <ul class="main-nav__list">
+        <ul class="main-nav__list reset-list">
           <li class="main-nav__item">
             <a class="main-nav__link" href="#">
               <span class="main-nav__name">Каталог товаров</span>
@@ -56,7 +57,7 @@
     </section>
 
     <section class="catalog">
-      <ul class="catalog__list">
+      <ul class="catalog__list reset-list container">
         <li class="product">
           <a class="product__link" href="#">
             <img class="product__image" src="./img/content/catalog-bunny.jpg" width="260"  height="195" alt="Зайчик-попрыгайчик." >
@@ -109,7 +110,7 @@
     </section>
 
     <section class="process">
-      <div class="process__container">
+      <div class="process__container container">
         <h2 class="process__title">Процесс производства</h2>
         <div class="process__video video">
           <img class="video__image" src="./img/content/video-image.jpg" width="260" height="150" alt="Процесс производства.">
@@ -124,8 +125,8 @@
   </main>
 
   <footer class="footer">
-    <div class="footer__container">
-      <ul class="footer__social social-list">
+    <div class="footer__container container">
+      <ul class="footer__social social-list reset-list">
         <li class="social-list__item">
           <a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy">
             <svg width="28" height="23" viewBox="0 0 28 23" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Вконтакте.">
@@ -157,30 +158,28 @@
     </div>
   </footer>
 
-  <div class="modal">
+  <div class="modal modal--close">
     <div class="modal__content">
-      <div class="modal__container">
-        <h2 class="modal__title main-title">Добавить в корзину</h2>
-        <form action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="modal__wrapper">
-            <legend class="modal__name">
+      <h2 class="modal__title">Добавить в корзину</h2>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="modal__wrapper">
+          <legend class="modal__name">
+            <label class="modal__label">
+              <span class="modal__value">S</span>
+              <input class="modal__input visually-hidden" type="radio" name="size" value="S">
+            </label>
               <label class="modal__label">
-                <span class="modal__value">S</span>
-                <input class="modal__input" type="radio" name="size" value="S">
+                <span class="modal__value">M</span>
+                <input class="modal__input visually-hidden" type="radio" name="size" value="M">
               </label>
-                <label class="modal__label">
-                  <span class="modal__value">M</span>
-                  <input class="modal__input" type="radio" name="size" value="M">
-                </label>
-                <label class="modal__label">
-                  <span class="modal__value">L</span>
-                  <input class="modal__input" type="radio" name="size" value="L">
-                </label>
-            </legend>
-          </fieldset>
-          <button class="modal__button button" type="submit">Добавить</button>
-        </form>
-      </div>
+              <label class="modal__label">
+                <span class="modal__value">L</span>
+                <input class="modal__input visually-hidden" type="radio" name="size" value="L">
+              </label>
+          </legend>
+        </fieldset>
+        <button class="modal__button button visually-hidden" type="submit">Добавить</button>
+      </form>
     </div>
   </div>
 </body>

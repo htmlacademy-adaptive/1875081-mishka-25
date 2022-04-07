@@ -1,0 +1,20 @@
+.about {
+  @include outline;
+}
+
+.about__title {
+  margin: 0;
+
+  @include fonts(700, 25px, 120%);
+}
+
+.about__list {
+  display: grid;
+  gap: 30px;
+}
+
+.about__item {
+  padding-top: 45px;
+
+  @include fonts(700, 17px, 118%);
+}

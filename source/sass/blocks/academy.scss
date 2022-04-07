@@ -1,0 +1,10 @@
+.academy {
+  @include outline;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 30px;
+
+  @include fonts (700, 19px, 110%);
+}

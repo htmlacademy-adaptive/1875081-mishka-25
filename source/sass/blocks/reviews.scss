@@ -1,0 +1,13 @@
+.reviews {
+  @include outline;
+}
+
+.reviews__container {
+  margin-bottom: 38px;
+}
+
+.reviews__title {
+  margin: 0;
+
+  @include fonts(700, 25px, $color-general, 120%);
+}

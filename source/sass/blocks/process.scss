@@ -1,0 +1,21 @@
+.process {
+  @include outline();
+}
+
+.process__container {
+  width: 260px;
+  margin: 0 auto;
+}
+
+.process__title {
+  @include fonts(700, 17px, $color-general, 141%);
+}
+
+.process__description {
+  @include fonts(400, 13px, $color-secondary, 185%);
+}
+
+.process__button {
+  display: block;
+  text-decoration: none;
+}

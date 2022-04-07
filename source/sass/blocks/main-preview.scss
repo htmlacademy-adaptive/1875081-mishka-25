@@ -1,0 +1,14 @@
+.main-preview {
+  background-image: url("../img/background/hero-header.jpg");
+  background-repeat: no-repeat;
+}
+
+.preview__link {
+  @include fonts(700, 19px, #ffffff, 126%);
+  text-decoration: none;
+  background-color: $color-light-accent;
+
+  &--accent {
+    background-color: $color-dark-accent;
+  }
+}

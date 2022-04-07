@@ -1,0 +1,39 @@
+.slider__list {
+  margin-bottom: 30px;
+
+  @include fonts(400, 15px, $color-secondary, 200%);
+}
+
+.slider__content {
+  margin: 0;
+}
+
+.slider__author {
+  @include fonts(700, 17px, $color-general, 141%);
+}
+
+.slider__author-social {
+  @include fonts();
+  color: inherit;
+  line-height: 176%;
+  text-decoration: none;
+}
+
+.slider__toggles {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.slider__toggle {
+  padding: 13px 38px;
+  border: 1px solid #ececec;
+
+  &--prev {
+    border-right: none;
+  }
+
+  &--next {
+    border-left: none;
+  }
+}
