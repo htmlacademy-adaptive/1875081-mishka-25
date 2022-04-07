@@ -1,0 +1,12 @@
+@mixin fonts ($weight: 400, $fs: 17px, $color: $color-general, $lh: 111%) {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: $fs;
+  font-weight: $weight;
+  font-style: normal;
+  line-height: $lh;
+  color: $color;
+}
+
+@mixin outline() {
+  outline: 1px solid #79140b;
+}
