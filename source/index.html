@@ -7,7 +7,7 @@
 </head>
 <body class="page__body">
   <header class="header">
-    <div class="header__container">
+    <div class="header__container container">
       <a class="header__logo" href="#">
         <img class="header__logo-image" src="./img/content/mishka-logo-mobile.svg" width="86" height="35" alt="Магазин игрушек ручной работы Мишка." >
       </a>
@@ -17,7 +17,7 @@
             <span class="visually-hidden">Открыть меню.</span>
           </span>
         </button>
-        <ul class="main-nav__list">
+        <ul class="main-nav__list reset-list">
           <li class="main-nav__item">
             <a class="main-nav__link" href="./catalog.html">
               <span class="main-nav__name">Каталог товаров</span>
@@ -52,11 +52,11 @@
   <main class="main">
     <h1 class="visually-hidden">Интернет-магазин товаров ручной работы "Мишка".</h1>
 
-    <section class="preview main-preview">
+    <section class="preview main-preview container">
       <h2 class="preview__title">
         Милые штуки ручной работы для дома
       </h2>
-      <ul class="preview__list">
+      <ul class="preview__list reset-list">
         <li class="preview__item">
           <a class="preview__link" href="#">Предметы интерьера</a>
         </li>
@@ -68,7 +68,7 @@
 
     <section class="product-card">
       <h2 class="visually-hidden">Карточка товара недели.</h2>
-      <div class="product-card__container">
+      <div class="product-card__container container">
         <h3 class="product-card__title">Вязаные корзинки</h3>
         <p class="product-card__text">Товар недели</p>
         <p class="product-card__description">Экологически чистая пряжа,
@@ -89,16 +89,14 @@
         </dl>
         <img class="product-card__image" src="./img/content/product-week.jpg" width="260" height="315" alt="Товар недели: вязаные корзинки.">
         <p class="product-card__price">Цена: <span class="product-card__value">990 руб.</span></p>
-        <button class="product-card__button button" type="button">
-          <span class="button__text">Заказать</span>
-        </button>
+        <button class="product-card__button button" type="button">Заказать</button>
       </div>
     </section>
 
     <section class="about">
-      <div class="about__container">
+      <div class="about__container container">
         <h2 class="about__title">Коротко о нас:</h2>
-        <ul class="about__list">
+        <ul class="about__list reset-list">
           <li class="about__item about__item--eco">Экологически чистые материалы</li>
           <li class="about__item about__item--style">Скандинавский стиль по российской цене</li>
           <li class="about__item about__item--likes">Увеличивает лайки на фотографиях</li>
@@ -110,10 +108,10 @@
     </section>
 
     <section class="reviews">
-      <div class="reviews__container">
+      <div class="reviews__container container">
         <h2 class="reviews__title">Отзывы</h2>
         <div class="reviews__slider slider">
-          <ul class="slider__list">
+          <ul class="slider__list reset-list">
             <li class="slider__item">
               <blockquote class="slider__content">
                 <p class="slider__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
@@ -131,14 +129,12 @@
             </button>
           </p>
         </div>
-        <a class="reviews__button button" href="#">
-          <span class="button__text">Написать</span>
-        </a>
+        <a class="reviews__button button" href="#">Написать</a>
       </div>
     </section>
 
     <section class="contacts">
-      <div class="contacts__container">
+      <div class="contacts__container container">
         <h2 class="contacts__title">Контакты</h2>
         <div class="contacts__wrapper">
           <p class="contacts__description">
@@ -154,15 +150,15 @@
       <div class="contacts__map">
         <img class="contacts-map__image" src="./img/content/map-image.jpg" width="320" height="455" alt="Как нас найти.">
       </div>
-      <a class="contacts__button button" href="#">
-        <span class="button__text">Напишите нам</span>
-      </a>
+      <div class="container">
+        <a class="contacts__button button" href="#">Напишите нам</a>
+      </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="footer__container">
-      <ul class="footer__social social-list">
+    <div class="footer__container container">
+      <ul class="footer__social social-list reset-list">
         <li class="social-list__item">
           <a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy">
             <svg width="28" height="23" viewBox="0 0 28 23" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Вконтакте.">
