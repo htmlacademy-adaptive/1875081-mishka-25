@@ -2,28 +2,25 @@
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("/source/fonts/opensans.woff") format("woff"), url("/source/fonts/opensans.woff2") format("woff2");
+  src: url("/source/fonts/opensans.woff2") format("woff2"), url("/source/fonts/opensans.woff") format("woff");
   font-display: swap;
 }
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("/source/fonts/opensansbold.woff") format("woff"), url("/source/fonts/opensansbold.woff2") format("woff2");
+  src: url("/source/fonts/opensansbold.woff2") format("woff2"), url("/source/fonts/opensansbold.woff") format("woff");
   font-display: swap;
 }
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
+.reset-list {
+  margin: 0;
   padding: 0;
-  white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+  list-style: none;
+}
+
+.container {
+  width: 260px;
+  margin: 0 auto;
 }
 
 .page {
@@ -34,13 +31,13 @@
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100%;
-  max-width: 320px;
   margin: 0 auto;
   padding: 0;
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 17px;
   font-weight: 400;
   font-style: normal;
+  line-height: 111%;
   color: #000000;
 }
 
@@ -50,9 +47,6 @@
 
 .header__container {
   outline: 1px solid #79140b;
-  display: flex;
-  width: 260px;
-  margin: 0 auto;
 }
 
 .main-nav {
@@ -73,12 +67,6 @@
   cursor: pointer;
 }
 
-.main-nav__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
 .main-nav__link {
   display: block;
   padding: 28px 32px;
@@ -86,8 +74,8 @@
   font-size: 17px;
   font-weight: 700;
   font-style: normal;
-  color: #000000;
   line-height: 141%;
+  color: #000000;
   text-decoration: none;
 }
 
@@ -103,8 +91,8 @@
   font-size: 27px;
   font-weight: 700;
   font-style: normal;
-  color: #000000;
   line-height: 111%;
+  color: #000000;
 }
 
 .main-preview {
@@ -112,19 +100,13 @@
   background-repeat: no-repeat;
 }
 
-.preview__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
 .preview__link {
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 19px;
   font-weight: 700;
   font-style: normal;
-  color: #ffffff;
   line-height: 126%;
+  color: #ffffff;
   text-decoration: none;
   background-color: #63d1bb;
 }
@@ -136,19 +118,14 @@
   outline: 1px solid #79140b;
 }
 
-.product-card__container {
-  width: 260px;
-  margin: 0 auto;
-}
-
 .product-card__title {
   margin: 0;
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 25px;
   font-weight: 700;
   font-style: normal;
-  color: #000000;
   line-height: 120%;
+  color: #000000;
 }
 
 .product-card__text {
@@ -157,9 +134,9 @@
   font-size: 17px;
   font-weight: 700;
   font-style: normal;
+  line-height: 118%;
   color: #63d1bb;
   text-transform: uppercase;
-  line-height: 118%;
 }
 
 .product-card__description {
@@ -168,8 +145,8 @@
   font-size: 15px;
   font-weight: 400;
   font-style: normal;
-  color: #444444;
   line-height: 160%;
+  color: #444444;
 }
 
 .product-card__price {
@@ -177,6 +154,7 @@
   font-size: 17px;
   font-weight: 700;
   font-style: normal;
+  line-height: 111%;
   color: #444444;
   text-align: center;
 }
@@ -189,8 +167,8 @@
   font-size: 15px;
   font-weight: 400;
   font-style: normal;
-  color: #444444;
   line-height: 133%;
+  color: #444444;
 }
 
 .detailed__name {
@@ -204,29 +182,26 @@
 
 .button {
   outline: 1px solid #79140b;
-  padding: 16px 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 17px 30px;
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 700;
   font-style: normal;
-  color: #444444;
   line-height: 111%;
+  color: #444444;
   text-transform: uppercase;
+  text-decoration: none;
   background-color: #ffffff;
   border: 2px solid #444444;
-}
-
-.button__text {
-  padding: 10px;
+  box-sizing: border-box;
 }
 
 .about {
   outline: 1px solid #79140b;
-}
-
-.about__container {
-  width: 260px;
-  margin: 0 auto;
 }
 
 .about__title {
@@ -235,16 +210,13 @@
   font-size: 25px;
   font-weight: 700;
   font-style: normal;
-  color: #000000;
-  line-height: 120%;
+  line-height: 111%;
+  color: 120%;
 }
 
 .about__list {
   display: grid;
   gap: 30px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
 }
 
 .about__item {
@@ -253,8 +225,8 @@
   font-size: 17px;
   font-weight: 700;
   font-style: normal;
-  color: #000000;
-  line-height: 118%;
+  line-height: 111%;
+  color: 118%;
 }
 
 .reviews {
@@ -262,8 +234,6 @@
 }
 
 .reviews__container {
-  width: 260px;
-  margin: 0 auto;
   margin-bottom: 38px;
 }
 
@@ -273,27 +243,18 @@
   font-size: 25px;
   font-weight: 700;
   font-style: normal;
-  color: #000000;
   line-height: 120%;
-}
-
-.reviews__button {
-  display: block;
-  margin-bottom: 45px;
-  text-decoration: none;
+  color: #000000;
 }
 
 .slider__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
   margin-bottom: 30px;
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 15px;
   font-weight: 400;
   font-style: normal;
-  color: #444444;
   line-height: 200%;
+  color: #444444;
 }
 
 .slider__content {
@@ -305,8 +266,8 @@
   font-size: 17px;
   font-weight: 700;
   font-style: normal;
-  color: #000000;
   line-height: 141%;
+  color: #000000;
 }
 
 .slider__author-social {
@@ -314,6 +275,7 @@
   font-size: 17px;
   font-weight: 400;
   font-style: normal;
+  line-height: 111%;
   color: #000000;
   color: inherit;
   line-height: 176%;
@@ -341,19 +303,14 @@
   outline: 1px solid #79140b;
 }
 
-.contacts__container {
-  width: 260px;
-  margin: 0 auto;
-}
-
 .contacts__title {
   margin: 0;
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 25px;
   font-weight: 700;
   font-style: normal;
-  color: #000000;
   line-height: 120%;
+  color: #000000;
 }
 
 .contacts__description {
@@ -362,8 +319,8 @@
   font-size: 14px;
   font-weight: 400;
   font-style: normal;
-  color: #444444;
   line-height: 214%;
+  color: #444444;
 }
 
 .contacts__name {
@@ -377,8 +334,8 @@
   font-size: 14px;
   font-weight: 400;
   font-style: normal;
-  color: #444444;
   line-height: 214%;
+  color: #444444;
   text-decoration: none;
 }
 
@@ -387,28 +344,13 @@
   width: 183px;
 }
 
-.contacts__button {
-  display: block;
-  text-decoration: none;
-}
-
 .contacts-map__image {
   display: inline-block;
 }
 
 .footer {
   outline: 1px solid #79140b;
-}
-
-.footer__container {
-  width: 260px;
-  margin: 0 auto;
-}
-
-.footer__social {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  background-color: #f1f1f1;
 }
 
 .social-list {
@@ -427,8 +369,8 @@
   font-size: 19px;
   font-weight: 700;
   font-style: normal;
-  color: #000000;
-  line-height: 110%;
+  line-height: 111%;
+  color: 110%;
 }
 
 .modal__content {
@@ -442,8 +384,8 @@
   font-size: 25px;
   font-weight: 700;
   font-style: normal;
-  color: #000000;
   line-height: 120%;
+  color: #000000;
   text-transform: uppercase;
 }
 
@@ -462,8 +404,8 @@
   font-size: 15px;
   font-weight: 400;
   font-style: normal;
-  color: #444444;
   line-height: 200%;
+  color: #444444;
 }
 
 .modal__label {
@@ -479,6 +421,7 @@
   font-size: 17px;
   font-weight: 700;
   font-style: normal;
+  line-height: 111%;
   color: #444444;
 }
 
@@ -490,14 +433,6 @@
 
 .catalog {
   outline: 1px solid #79140b;
-}
-
-.catalog__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  width: 260px;
-  margin: 0 auto;
 }
 
 .product {
@@ -513,8 +448,8 @@
   font-size: 17px;
   font-weight: 700;
   font-style: normal;
-  color: #000000;
   line-height: 141%;
+  color: #000000;
 }
 
 .product__description {
@@ -522,8 +457,8 @@
   font-size: 13px;
   font-weight: 400;
   font-style: normal;
-  color: #444444;
   line-height: 231%;
+  color: #444444;
 }
 
 .product__price {
@@ -531,8 +466,8 @@
   font-size: 15px;
   font-weight: 700;
   font-style: normal;
-  color: #000000;
   line-height: 160%;
+  color: #000000;
 }
 
 .product__button {
@@ -554,8 +489,8 @@
   font-size: 17px;
   font-weight: 700;
   font-style: normal;
-  color: #000000;
   line-height: 141%;
+  color: #000000;
 }
 
 .process__description {
@@ -563,8 +498,8 @@
   font-size: 13px;
   font-weight: 400;
   font-style: normal;
-  color: #444444;
   line-height: 185%;
+  color: #444444;
 }
 
 .process__button {
@@ -576,18 +511,13 @@
   outline: 1px solid #79140b;
 }
 
-.forms__container {
-  width: 260px;
-  margin: 0 auto;
-}
-
 .forms__description {
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 13px;
   font-weight: 400;
   font-style: normal;
-  color: #444444;
   line-height: 185%;
+  color: #444444;
 }
 
 .form__fieldset {
@@ -605,8 +535,8 @@
   font-size: 17px;
   font-weight: 700;
   font-style: normal;
-  color: #63d1bb;
   line-height: 110%;
+  color: #63d1bb;
   text-transform: uppercase;
 }
 
@@ -631,8 +561,8 @@
   font-size: 17px;
   font-weight: 700;
   font-style: normal;
-  color: #000000;
   line-height: 106%;
+  color: #000000;
 }
 
 .form__input {
@@ -642,6 +572,7 @@
   font-size: 17px;
   font-weight: 400;
   font-style: normal;
+  line-height: 106%;
   color: #000000;
   line-height: 106%;
   border: none;
@@ -656,7 +587,21 @@
   font-size: 14px;
   font-weight: 400;
   font-style: normal;
-  color: #444444;
   line-height: 114%;
+  color: #444444;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 /*# sourceMappingURL=style.css.map */
