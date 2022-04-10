@@ -1,7 +1,7 @@
 .main-nav {
   position: relative;
   display: grid;
-  grid-template-columns: 85% 15%;
+  grid-template-columns: 83% 17%;
   grid-template-areas: "logo button" "menu menu";
   align-items: center;
 
@@ -50,6 +50,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  box-sizing: border-box;
   width: 100%;
   grid-area: menu;
   background-color: #ffffff;
@@ -59,12 +60,12 @@
   }
 }
 
+.main-nav__new-menu {
+  display: none;
+}
+
 .main-nav__item {
   box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
-
-  &--hidden {
-    display: none;
-  }
 }
 
 .main-nav__link {
@@ -96,6 +97,7 @@
 
 @media (min-width: 768px) {
   .main-nav {
+    box-sizing: border-box;
     padding: 0 40px;
 
     &::after {
@@ -183,7 +185,7 @@
     grid-template-columns: 42% 50%;
     grid-template-rows: 1fr 1fr;
     column-gap: 90px;
-    grid-template-areas: "list1 list2" "list1 delivery";
+    grid-template-areas: "list1 list2" "list3 delivery";
   }
 
   .main-nav__list {
@@ -191,10 +193,9 @@
     flex-wrap: wrap;
   }
 
-  .main-nav__item {
-    &--hidden {
-      display: block;
-    }
+  .main-nav__new-menu {
+    display: flex;
+    grid-area: list3;
   }
 
   .main-nav__link {

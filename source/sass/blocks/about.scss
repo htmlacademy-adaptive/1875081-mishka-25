@@ -1,11 +1,12 @@
-.about {
-  @include outline;
+.about__container {
+  margin-top: 31px;
 }
 
 .about__title {
   margin: 0;
+  margin-bottom: 28px;
 
-  @include fonts(700, 25px, 120%);
+  @include fonts(700, 25px,$color-general, 120%);
 }
 
 .about__list {
@@ -14,7 +15,87 @@
 }
 
 .about__item {
-  padding-top: 45px;
+  position: relative;
+  padding-top: 60px;
+  padding-right: 35%;
 
-  @include fonts(700, 17px, 118%);
+  @include fonts(700, 17px, $color-general, 118%);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 55px;
+    height: 40px;
+    background-position: 0 center;
+    background-repeat: no-repeat;
+  }
+
+
+  &--eco {
+    &::before {
+      background-image: url("../img/icon/icon-eco.svg");
+    }
+  }
+
+  &--style {
+    &::before {
+      background-image: url("../img/icon/icon-style.svg");
+    }
+  }
+
+  &--likes {
+    &::before {
+      background-image: url("../img/icon/icon-likes.svg");
+    }
+  }
+
+  &--handmade {
+    &::before {
+      background-image: url("../img/icon/icon-handmade.svg");
+    }
+  }
+
+  &--local {
+    &::before {
+      background-image: url("../img/icon/icon-local.svg");
+    }
+  }
+
+  &--gift {
+    &::before {
+      background-image: url("../img/icon/icon-gift.svg");
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .about__list {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-auto-flow: column;
+    column-gap: 100px;
+    row-gap: 60px;
+  }
+
+  .about__title {
+    @include fonts(700, 43px, $color-general, 116%);
+  }
+
+  .about__item {
+    padding-right: 0;
+
+    @include fonts(700, 20px, $color-general, 110%);
+  }
+}
+
+@media (min-width: 1150px) {
+  .about__container {
+    width: 65%;
+  }
+
+  .about__title {
+    @include fonts(700, 53px, $color-general, 108%);
+  }
 }

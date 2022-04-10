@@ -1,6 +1,6 @@
 .logo {
   display: inline-block;
-  padding: 22px 30px 22px 60px;
+  padding: 22px 30px 18px 80px;
   text-align: center;
   grid-area: logo;
 }
@@ -9,7 +9,7 @@
   .logo {
     position: absolute;
     top: 0;
-    left: 40px;
+    left: 0;
     padding: 22px 0;
   }
 }
