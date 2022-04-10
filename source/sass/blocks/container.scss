@@ -1,4 +1,16 @@
 .container {
-  width: 90%;
+  width: calc(100% - 60px);
   margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: calc(100% - 80px);
+  }
+}
+
+@media (min-width: 1150px) {
+  .container {
+    width: calc(100% - 100px);
+  }
 }
