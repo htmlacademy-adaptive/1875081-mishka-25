@@ -1,14 +1,68 @@
 .main-preview {
   background-image: url("../img/background/hero-header.jpg");
   background-repeat: no-repeat;
+  background-size: 170%;
+  background-position: center 0;
 }
 
-.preview__link {
+.main-preview__link {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 24px 60% 30px 30px;
+
   @include fonts(700, 19px, #ffffff, 126%);
   text-decoration: none;
   background-color: $color-light-accent;
 
-  &--accent {
+  &--light {
+    background-image: url("../img/icon/interior.svg");
+    background-repeat: no-repeat;
+    background-position: 90% center;
+  }
+
+  &--dark {
     background-color: $color-dark-accent;
+    background-image: url("../img/icon/toy.svg");
+    background-repeat: no-repeat;
+    background-position: 90% center;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-preview {
+    position: relative;
+    z-index: 1;
+    background-size: 150%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 25px;
+      background-image: url("../img/background/zigzag.png");
+      background-repeat: repeat-x;
+      background-size: contain;
+      background-position: 0 0;
+    }
+  }
+
+  .main-preview__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 40px 12px 40px;
+  }
+
+  .main-preview__link {
+    @include fonts(700, 20px, #ffffff, 150%);
+    // min-height: 100%;
+  }
+}
+
+@media (min-width: 1150px) {
+  .main-preview {
+    background-size: 100%;
   }
 }

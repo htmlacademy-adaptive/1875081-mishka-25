@@ -1,11 +1,26 @@
 .preview {
-  @include outline();
-  padding: 0 30px;
   background-color: $color-bg;
 }
 
 .preview__title {
+  box-sizing: border-box;
+  padding: 75px 31px 120px;
   margin: 0;
 
   @include fonts(700, 27px);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .preview__title {
+    @include fonts(700, 43px, $color-general, 116%);
+    padding: 155px 1px 372px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .preview__title {
+    @include fonts(700, 53px, $color-general, 108%);
+    padding: 158px 1px 355px;
+  }
 }

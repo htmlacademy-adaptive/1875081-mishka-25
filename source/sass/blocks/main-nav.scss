@@ -1,30 +1,209 @@
 .main-nav {
-  @include outline;
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  display: grid;
+  grid-template-columns: 85% 15%;
+  grid-template-areas: "logo button" "menu menu";
+  align-items: center;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #ececec;
+    content: "";
+  }
+
+  &::after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #ececec;
+    content: "";
+  }
 }
 
 .main-nav__toggle {
-  position: relative;
-
-  display: flex;
-  align-items: center;
-  align-self: flex-end;
+  grid-area: button;
 
   width: 30px;
   height: 30px;
-  padding: 0;
+  padding: 5px;
 
-  background-color: transparent;
+  background-color: #ffffff;
+  background-image: url("../img/icon/burger-button.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
 
   cursor: pointer;
+
+  &--close {
+    background-image: url("../img/icon/burger-button-close.svg");
+  }
+}
+
+.main-nav__menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  grid-area: menu;
+  background-color: #ffffff;
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.main-nav__item {
+  box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
+
+  &--hidden {
+    display: none;
+  }
 }
 
 .main-nav__link {
+  position: relative;
   display: block;
-  padding: 28px 32px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 28px 33px 28px 76px;
 
   @include fonts(700, 17px, $color-general, 141%);
 
   text-decoration: none;
+}
+
+.main-nav__icon {
+  position: absolute;
+  top: 28px;
+  left: 32px;
+}
+
+.main-nav__delivery {
+  @include fonts(400, 15px, $color-secondary, 160%);
+  margin: 0;
+
+  &--hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    padding: 0 40px;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #ececec;
+      content: "";
+    }
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__menu {
+    position: static;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-areas: "list2 list2" "list1 delivery";
+    background-color: transparent;
+  }
+
+  .main-nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: list1;
+  }
+
+  .main-nav__item {
+    box-shadow: none;
+
+    &--users {
+      box-shadow: inset 1px 0 0 #ececec;
+    }
+  }
+
+  .main-nav__link {
+    padding: 28px 35px 28px 0;
+
+    &--basket {
+      padding: 28px 0 28px 76px;
+    }
+
+    &--search {
+      padding: 28px 35px;
+    }
+
+    &--medium {
+      @include fonts(700, 15px, $color-general, 160%);
+    }
+  }
+
+  .main-nav__icon {
+    &--search {
+      position: static;
+    }
+  }
+
+  .main-nav__name {
+    &--search {
+      display: none;
+    }
+  }
+
+  .main-nav__delivery {
+    display: block;
+    grid-area: delivery;
+    margin-left: auto;
+    align-self: center;
+  }
+
+  .main-nav__users-menu {
+    grid-area: list2;
+    display: flex;
+    font-weight: wrap;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 1150px) {
+  .main-nav__menu {
+    grid-template-columns: 42% 50%;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 90px;
+    grid-template-areas: "list1 list2" "list1 delivery";
+  }
+
+  .main-nav__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .main-nav__item {
+    &--hidden {
+      display: block;
+    }
+  }
+
+  .main-nav__link {
+    &--medium {
+      @include fonts(700, 17px, $color-general, 141%);
+    }
+
+    &--medium-hidden {
+      @include fonts(700, 15px, $color-general, 160%);
+    }
+  }
 }
