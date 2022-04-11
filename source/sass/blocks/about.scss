@@ -1,5 +1,6 @@
 .about__container {
   margin-top: 31px;
+  margin-bottom: 58px;
 }
 
 .about__title {
@@ -71,6 +72,10 @@
 }
 
 @media (min-width: 768px) {
+  .about__container {
+    margin-bottom: 83px;
+  }
+
   .about__list {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;

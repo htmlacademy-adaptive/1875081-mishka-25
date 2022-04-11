@@ -5,6 +5,7 @@
 .page__body {
   display: grid;
   grid-template-rows: auto 1fr auto;
+  max-width: 1440px;
   min-height: 100%;
   margin: 0 auto;
   padding: 0;

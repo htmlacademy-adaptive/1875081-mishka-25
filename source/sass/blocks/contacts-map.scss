@@ -1,3 +1,18 @@
+.contacts-map {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 41px;
+}
+
 .contacts-map__image {
-  display: inline-block;
+  display: block;
+  margin-bottom: 0;
+  object-fit: contain;
+}
+
+@media (min-width: 1150px) {
+  .contacts-map {
+    display: block;
+    margin-bottom: 0;
+  }
 }
