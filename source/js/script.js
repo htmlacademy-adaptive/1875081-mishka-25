@@ -6,7 +6,6 @@ button.onclick = function () {
   wrapper.classList.toggle('main-nav__menu--hidden');
 }
 
-
 let modalButton = document.querySelector(".product-card__button");
 let modalWindow = document.querySelector(".modal");
 let modalContent = modalWindow.querySelector(".modal__content");
@@ -22,4 +21,3 @@ modalWindow.onclick = function(evt) {
 modalButton.onclick = function () {
   modalWindow.classList.remove('modal--close');
 }
-
