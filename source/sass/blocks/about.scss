@@ -34,40 +34,28 @@
   }
 
 
-  &--eco {
-    &::before {
-      background-image: url("../img/icon/icon-eco.svg");
-    }
+  &--eco::before {
+    background-image: url("../img/icon/icon-eco.svg");
   }
 
-  &--style {
-    &::before {
-      background-image: url("../img/icon/icon-style.svg");
-    }
+  &--style::before {
+    background-image: url("../img/icon/icon-style.svg");
   }
 
-  &--likes {
-    &::before {
-      background-image: url("../img/icon/icon-likes.svg");
-    }
+  &--likes::before {
+    background-image: url("../img/icon/icon-likes.svg");
   }
 
-  &--handmade {
-    &::before {
-      background-image: url("../img/icon/icon-handmade.svg");
-    }
+  &--handmade::before {
+    background-image: url("../img/icon/icon-handmade.svg");
   }
 
-  &--local {
-    &::before {
-      background-image: url("../img/icon/icon-local.svg");
-    }
+  &--local::before {
+    background-image: url("../img/icon/icon-local.svg");
   }
 
-  &--gift {
-    &::before {
-      background-image: url("../img/icon/icon-gift.svg");
-    }
+  &--gift::before {
+    background-image: url("../img/icon/icon-gift.svg");
   }
 }
 

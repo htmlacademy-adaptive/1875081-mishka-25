@@ -1,10 +1,10 @@
 .preview {
   background-color: $color-bg;
+  padding: 73px 31px;
 }
 
 .preview__title {
   box-sizing: border-box;
-  padding: 74px 31px 120px;
   margin: 0;
 
   @include fonts(700, 27px);
@@ -12,15 +12,37 @@
 }
 
 @media (min-width: 768px) {
+  .preview {
+    position: relative;
+    z-index: 1;
+    background-size: 150%;
+    padding: 101px 0 75px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 24px;
+      background-image: url("../img/background/zigzag.png");
+      background-repeat: repeat-x;
+      background-size: contain;
+      background-position: 0 0;
+    }
+  }
+
   .preview__title {
     @include fonts(700, 43px, $color-general, 116%);
-    padding: 155px 1px 372px;
   }
 }
 
 @media (min-width: 1150px) {
+  .preview {
+    padding: 102px 0 95px;
+  }
+
   .preview__title {
     @include fonts(700, 53px, $color-general, 108%);
-    padding: 158px 1px 355px;
   }
 }

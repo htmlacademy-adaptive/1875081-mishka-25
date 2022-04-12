@@ -1,5 +1,7 @@
 .product {
-  @include outline();
+  border: 1px solid #ececec;
+  width: 260px;
+  margin: 0 auto;
 }
 
 .product__link {
@@ -7,11 +9,27 @@
 }
 
 .product__title {
+  margin: 0;
+  padding: 28px 28px 5px;
+
   @include fonts(700, 17px, $color-general, 141%);
 }
 
 .product__description {
+  margin: 0 28px 17px;
+
   @include fonts(400, 13px, $color-secondary, 231%);
+}
+
+.product__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 204px;
+  margin: 0 auto;
+  padding: 22px 0 26px;
+
+  border-top: 1px solid #ececec;
 }
 
 .product__price {

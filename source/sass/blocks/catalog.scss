@@ -1,3 +1,8 @@
 .catalog {
-  @include outline();
+  padding: 30px 0;
+}
+
+.catalog__list {
+  display: grid;
+  gap: 30px;
 }
