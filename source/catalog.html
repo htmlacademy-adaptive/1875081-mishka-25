@@ -148,7 +148,11 @@
       <div class="process__container container">
         <h2 class="process__title">Процесс производства</h2>
         <div class="process__video video">
-          <img class="video__image" src="./img/content/video-image.jpg" width="260" height="150" alt="Процесс производства.">
+          <picture class="video__picture">
+            <source media="(min-width: 1150px)" srcset="./img/content/video-image-desktop.jpg">
+            <source media="(min-width: 768px)" srcset="./img/content/video-image-tablet.jpg">
+            <img class="video__image" src="./img/content/video-image.jpg" alt="Процесс производства.">
+          </picture>
           <button class="video__button" type="button">
             <span class="visually-hidden">Запуск видео.</span>
           </button>
@@ -162,7 +166,7 @@
   <footer class="footer">
     <div class="footer__container container">
       <a class="footer__logo" href="#">
-        <img class="footer__logo-image" src="../img/content/logo-footer.svg" alt="Магазин Мишка.">
+        <img class="footer__logo-image" src="./img/content/logo-footer.svg" alt="Магазин Мишка.">
       </a>
       <ul class="footer__social social-list reset-list">
         <li class="social-list__item">
@@ -201,10 +205,10 @@
       <h2 class="modal__title">Добавить в корзину</h2>
       <form action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="modal__wrapper">
-          <legend class="modal__name">
-            <label class="modal__label">
+          <legend class="modal__name">Выберите размер:</legend>
+            <label class="modal__label modal__label--checked">
               <span class="modal__value">S</span>
-              <input class="modal__input visually-hidden" type="radio" name="size" value="S">
+              <input class="modal__input visually-hidden" type="radio" name="size" value="S" checked>
             </label>
               <label class="modal__label">
                 <span class="modal__value">M</span>
@@ -214,12 +218,10 @@
                 <span class="modal__value">L</span>
                 <input class="modal__input visually-hidden" type="radio" name="size" value="L">
               </label>
-          </legend>
         </fieldset>
-        <button class="modal__button button visually-hidden" type="submit">Добавить</button>
+        <button class="modal__button button" type="submit">Добавить</button>
       </form>
     </div>
   </div>
-  <script src="./js/script.js"></script>
 </body>
 </html>

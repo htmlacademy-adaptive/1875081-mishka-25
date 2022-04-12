@@ -1,0 +1,23 @@
+.video {
+  position: relative;
+}
+
+.video__button {
+  position: absolute;
+  top: calc(50% - 38px);
+  left: calc(50% - 50px);
+  box-sizing: border-box;
+  width: 100px;
+  height: 76px;
+  background-color: $color-light-accent;
+  border: 5px solid #ffffff;
+  border-radius: 25px;
+  background-image: url("../img/icon/process-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.video__image {
+  display: block;
+  margin: 0;
+}

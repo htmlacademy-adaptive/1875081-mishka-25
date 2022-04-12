@@ -1,21 +1,129 @@
 .process {
-  @include outline();
+  padding-bottom: 58px;
 }
 
 .process__container {
+  border: 1px solid #ececec;
   width: 260px;
   margin: 0 auto;
+  padding: 21px 0 33px;
 }
 
 .process__title {
+  position: relative;
+  margin: 0 0 26px;
+  padding-left: 91px;
+
   @include fonts(700, 17px, $color-general, 141%);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 34px;
+    width: 32px;
+    height: 48px;
+    background-image: url("../img/icon/video.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
 .process__description {
+  width: 195px;
+  margin: 35px auto 41px;
+
   @include fonts(400, 13px, $color-secondary, 185%);
 }
 
 .process__button {
   display: block;
+  width: 192px;
+  margin: 0 auto;
+  padding: 17px 15px;
   text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .process {
+    padding-bottom: 64px;
+  }
+
+  .process__container {
+    display: grid;
+    width: 668px;
+    padding: 0 0 46px;
+  }
+
+  .process__title {
+    grid-row: 2/3;
+    margin-top: 38px;
+    padding-top: 3px;
+    padding-left: 107px;
+
+    @include fonts(700, 20px, $color-general, 120%);
+
+    &::before {
+      left: 42px;
+      background-position: 0 0;
+    }
+  }
+
+  .process__description {
+    width: 585px;
+
+    @include fonts(400, 15px, $color-secondary, 200%);
+  }
+
+  .process__button {
+    width: calc(100% - 84px);
+    margin: 0 auto;
+  }
+}
+
+
+@media (min-width: 1150px) {
+  .process {
+    padding-bottom: 105px;
+  }
+
+  .process__container {
+    width: 1050px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    padding-bottom: 0;
+  }
+
+  .process__video {
+    grid-column: 1/2;
+    grid-row: 1/4;
+  }
+
+  .process__title {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin: 47px 110px 27px 70px;
+    padding-top: 49px;
+    padding-left: 0;
+
+    &::before {
+      left: 0;
+      height: 22px;
+    }
+  }
+
+  .process__description {
+    width: 230px;
+    margin: 0 auto 0;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    line-height: 160%;
+  }
+
+  .process__button {
+    width: 230px;
+    grid-column: 2/3;
+    grid-row: 3/4;
+    margin-bottom: auto;
+  }
 }
