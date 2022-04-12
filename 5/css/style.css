@@ -35,7 +35,6 @@
 .container {
   width: calc(100% - 60px);
   margin: 0 auto;
-  max-width: 1150px;
 }
 
 @media (min-width: 768px) {
@@ -50,6 +49,7 @@
 .page__body {
   display: grid;
   grid-template-rows: auto 1fr auto;
+  max-width: 1150px;
   min-height: 100%;
   margin: 0 auto;
   padding: 0;
@@ -1508,6 +1508,7 @@
 .product__button {
   background-color: #ffffff;
   border: none;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -1690,6 +1691,7 @@
   background-image: url("../img/icon/process-arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
 }
 
 .video__image {
