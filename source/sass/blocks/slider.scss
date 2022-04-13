@@ -1,39 +1,128 @@
 .slider__list {
   margin-bottom: 30px;
+}
 
-  @include fonts(400, 15px, $color-secondary, 200%);
+.slider__item {
+  &--hidden {
+    display: none;
+  }
 }
 
 .slider__content {
   margin: 0;
 }
 
+.slider__text {
+  margin: 0;
+  margin-bottom: 33px;
+
+  @include fonts(400, 15px, $color-secondary, 200%);
+}
+
 .slider__author {
+  display: block;
+  max-width: 250px;
+
   @include fonts(700, 17px, $color-general, 141%);
 }
 
 .slider__author-social {
-  @include fonts();
-  color: inherit;
-  line-height: 176%;
+  @include fonts(400, 17px, $color-secondary, 176%);
   text-decoration: none;
 }
 
 .slider__toggles {
+  position: relative;
   display: flex;
-  justify-content: space-between;
   margin-bottom: 40px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background-color: #ececec;
+  }
 }
 
 .slider__toggle {
-  padding: 13px 38px;
+  flex-grow: 1;
+  padding-top: 13px;
+  padding-bottom: 13px;
   border: 1px solid #ececec;
+  border-right: none;
 
-  &--prev {
-    border-right: none;
+  &::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 26px;
+    background-image: url("../img/icon/slider-arrow.svg");
+    background-repeat: no-repeat;
   }
 
   &--next {
-    border-left: none;
+    transform: rotate(180deg);
+  }
+}
+
+@media (min-width: 768px) {
+  .slider {
+    position: relative;
+  }
+
+  .slider__list {
+    grid-area: text;
+    margin-bottom: 40px;
+  }
+
+  .slider__content {
+    display: grid;
+    grid-template-columns: 284px auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "text text text" "author . .";
+  }
+
+  .slider__text {
+    grid-area: text;
+    min-height: 120px;
+    margin-bottom: 61px;
+
+    @include fonts(400, 17px, $color-secondary, 176%);
+  }
+
+  .slider__author {
+    grid-area: author;
+    max-width: 284px;
+
+    @include fonts(700, 18px, $color-general, 133%);
+  }
+
+  .slider__toggles {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .slider__toggle {
+    border: none;
+  }
+}
+
+@media (min-width: 1150px) {
+  .slider__list {
+    margin-bottom: 96px;
+  }
+
+  .slider__text {
+    min-height: 90px;
+    margin-bottom: 44px;
   }
 }

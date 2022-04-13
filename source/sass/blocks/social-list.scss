@@ -1,6 +1,12 @@
 .social-list {
-  @include outline();
-
   display: flex;
-  border-bottom: 1px solid #e5e5e5;
+  justify-content: space-between;
+  align-items: center;
+  width: 142px;
+  padding: 2px 0;
+}
+
+.social-list__link {
+  display: flex;
+  align-items: center;
 }

@@ -5,9 +5,16 @@
 .page__body {
   display: grid;
   grid-template-rows: auto 1fr auto;
+  max-width: 1150px;
   min-height: 100%;
   margin: 0 auto;
   padding: 0;
 
   @include fonts(400);
+}
+
+@media (min-width: 768px) {
+  .page__header {
+    margin-bottom: -80px;
+  }
 }

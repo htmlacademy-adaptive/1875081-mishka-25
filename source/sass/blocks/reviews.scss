@@ -1,13 +1,57 @@
-.reviews {
-  @include outline;
-}
-
 .reviews__container {
   margin-bottom: 38px;
 }
 
 .reviews__title {
   margin: 0;
+  margin-bottom: 14px;
 
   @include fonts(700, 25px, $color-general, 120%);
+}
+
+@media (min-width: 768px) {
+  .reviews__container {
+    display: grid;
+    row-gap: 38px;
+    grid-template-columns: 285px 1fr 175px;
+    grid-template-rows: auto auto;
+    margin: 0;
+    padding: 82px 40px 85px 40px;
+    background-image: url("../img/background/reviews-bg.png"), url("../img/background/zigzag-product-card.png");
+    background-repeat: no-repeat, repeat-x;
+    background-position: 0 0, 0 100%;
+  }
+
+  .reviews__title {
+    grid-column: 1/2;
+    grid-row: 1/2;
+
+    @include fonts(700, 43px, $color-general, 116%);
+  }
+
+  .reviews__slider {
+    grid-column: 1/4;
+    grid-row: 2/3;
+  }
+
+  .reviews__button {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    margin: auto 0;
+  }
+}
+
+@media (min-width: 1150px) {
+  .reviews {
+    padding: 0 50px;
+  }
+
+  .reviews__container {
+    width: auto;
+    padding: 78px 0 67px 174px;
+  }
+
+  .reviews__title {
+    @include fonts(700, 53px, $color-general, 108%);
+  }
 }

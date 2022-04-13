@@ -1,18 +1,26 @@
 .button {
-  @include outline;
-
   display: flex;
   align-items: center;
   justify-content: center;
 
-  width: 100%;
   padding: 17px 30px;
 
   @include fonts(700, 18px, $color-secondary);
   text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
 
   background-color: #ffffff;
   border: 2px solid $color-secondary;
   box-sizing: border-box;
+
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .button {
+    padding: 16px 30px;
+
+    @include fonts(700, 17px, $color-secondary, 118%);
+  }
 }

@@ -1,0 +1,22 @@
+.logo {
+  display: inline-block;
+  padding: 22px 30px 18px 80px;
+  text-align: center;
+  grid-area: logo;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 22px 0;
+  }
+}
+
+@media (min-width: 1150px) {
+  .logo {
+    left: 50%;
+    padding-top: 5px;
+  }
+}
