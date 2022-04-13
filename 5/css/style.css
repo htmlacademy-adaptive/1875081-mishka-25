@@ -49,6 +49,7 @@
 .page__body {
   display: grid;
   grid-template-rows: auto 1fr auto;
+  max-width: 1150px;
   min-height: 100%;
   margin: 0 auto;
   padding: 0;
@@ -1441,7 +1442,7 @@
   }
 
   .catalog__list {
-    grid-template-columns: repeat(3, 316px);
+    grid-template-columns: repeat(3, 1fr);
     gap: 51px;
   }
 }
