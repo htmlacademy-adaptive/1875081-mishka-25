@@ -17,6 +17,7 @@
 
 .form__title {
   display: flex;
+  justify-content: space-between;
   margin: 0;
   margin-bottom: 30px;
 
@@ -26,9 +27,8 @@
   &::after {
     content: "";
     display: block;
-    width: 200px;
+    width: 80%;
     height: 1px;
-    margin-left: auto;
     align-self: center;
     background-color: $color-light-accent;
   }
@@ -42,7 +42,7 @@
   }
 
   &--email::after {
-    width: 182px;
+    width: 75%;
   }
 }
 
@@ -157,6 +157,7 @@
 
 .form__button {
   width: 100%;
+  padding: 14px 17px;
 }
 
 @media (min-width: 768px) {
@@ -289,9 +290,7 @@
 
   .form__container {
     box-sizing: border-box;
-    width: calc(100% - (225px + 97px));
-    margin-left: 97px;
-    margin-right: 225px;
+    padding: 0 175px 0 47px;
 
     grid-template-columns: 1fr 700px;
 

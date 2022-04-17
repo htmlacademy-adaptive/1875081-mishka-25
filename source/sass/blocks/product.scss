@@ -64,6 +64,11 @@
     flex-grow: 1;
   }
 
+  .product__image {
+    width: 334px;
+    height: 334px;
+  }
+
   .product__inner {
     margin-top: auto;
     width: 268px;
@@ -74,5 +79,10 @@
   .product {
     width: 316px;
     flex-direction: column;
+  }
+
+  .product__image {
+    width: 316px;
+    height: 462px;
   }
 }

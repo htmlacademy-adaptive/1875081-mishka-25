@@ -1,7 +1,8 @@
 .contacts-map {
-  display: flex;
-  justify-content: center;
+  display: block;
   margin-bottom: 41px;
+  border: none;
+  width: 100%;
 }
 
 .contacts-map__image {
@@ -10,9 +11,14 @@
   object-fit: contain;
 }
 
+@media (min-width: 768px) {
+  .contacts-map {
+    height: 457px;
+  }
+}
+
 @media (min-width: 1150px) {
   .contacts-map {
-    display: block;
     margin-bottom: 0;
   }
 }

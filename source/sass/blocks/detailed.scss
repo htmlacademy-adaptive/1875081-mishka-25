@@ -1,5 +1,6 @@
 .detailed__wrapper {
   display: grid;
+  box-sizing: border-box;
   width: 100%;
   grid-template-columns: 1fr 2fr;
   padding: 12px 0;
