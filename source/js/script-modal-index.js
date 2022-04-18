@@ -1,4 +1,4 @@
-let modalButton = document.querySelector(".product-card__button");
+let modalButton = document.querySelector(".product-week__button");
 let modalWindow = document.querySelector(".modal");
 let modalContent = modalWindow.querySelector(".modal__content");
 

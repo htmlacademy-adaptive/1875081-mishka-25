@@ -1,29 +1,31 @@
-.catalog {
-  padding: 30px 0;
-}
-
 .catalog__list {
   display: grid;
   gap: 30px;
 }
 
-@media (min-width: 768px) {
-  .catalog {
-    padding: 67px 0 53px;
-  }
+.catalog__product {
+  width: 260px;
+  margin: 0 auto;
+}
 
+
+@media (min-width: 768px) {
   .catalog__list {
     gap: 54px;
+  }
+
+  .catalog__product {
+    width: 670px;
   }
 }
 
 @media (min-width: 1150px) {
-  .catalog {
-    padding: 111px 0 57px;
-  }
-
   .catalog__list {
     grid-template-columns: repeat(3, 1fr);
     gap: 51px;
+  }
+
+  .catalog__product {
+    width: 316px;
   }
 }

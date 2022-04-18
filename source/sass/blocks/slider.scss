@@ -113,6 +113,16 @@
 
   .slider__toggle {
     border: none;
+
+    &:hover {
+      background-color: #ffffff;
+      opacity: 0.6;
+    }
+
+    &:active {
+      background-color: #ffffff;
+      opacity: 0.3;
+    }
   }
 }
 

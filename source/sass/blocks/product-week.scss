@@ -14,10 +14,6 @@
   }
 }
 
-.product-week__container {
-  margin-top: 31px;
-}
-
 .product-week__header {
   margin-bottom: 18px;
 }
@@ -165,7 +161,6 @@
   .product-week__container {
     grid-template-columns: 100px 1fr 525px;
     column-gap: 50px;
-    margin-top: 54px;
   }
 
   .product-week__header {

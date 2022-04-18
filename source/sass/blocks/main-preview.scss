@@ -18,6 +18,7 @@
 }
 
 .main-preview__link {
+  position: relative;
   display: flex;
   align-items: center;
   box-sizing: border-box;
@@ -27,17 +28,29 @@
   text-decoration: none;
   background-color: $color-light-accent;
 
-  &--light {
-    background-image: url("../img/icon/interior.svg");
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 36px;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 62px;
     background-repeat: no-repeat;
-    background-position: 87% center;
+    background-position: center;
+    opacity: 0.5;
+  }
+
+  &--light::after {
+    background-image: url("../img/icon/interior.svg");
   }
 
   &--dark {
     background-color: $color-dark-accent;
+  }
+
+  &--dark::after {
     background-image: url("../img/icon/toy.svg");
-    background-repeat: no-repeat;
-    background-position: 90% center;
   }
 }
 
@@ -63,7 +76,19 @@
 
   .main-preview__link {
     @include fonts(700, 20px, #ffffff, 150%);
+
+    &:hover {
+      transform: translateY(-5px) scaleY(1.1);
+    }
   }
+}
+
+.main-preview__link:hover::after {
+  opacity: 1;
+}
+
+.main-preview__link:active::after {
+  opacity: 0.3;
 }
 
 @media (min-width: 1150px) {

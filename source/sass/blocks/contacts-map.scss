@@ -1,6 +1,5 @@
 .contacts-map {
   display: block;
-  margin-bottom: 41px;
   border: none;
   width: 100%;
 }
@@ -14,11 +13,5 @@
 @media (min-width: 768px) {
   .contacts-map {
     height: 457px;
-  }
-}
-
-@media (min-width: 1150px) {
-  .contacts-map {
-    margin-bottom: 0;
   }
 }

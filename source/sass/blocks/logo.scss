@@ -12,6 +12,14 @@
     left: 0;
     transform: translateX(50%);
     padding: 22px 0;
+
+    &[href]:hover {
+      opacity: 0.6;
+    }
+
+    &[href]:active {
+      opacity: 0.3;
+    }
   }
 
   .logo__image {

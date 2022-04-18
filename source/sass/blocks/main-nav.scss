@@ -44,19 +44,26 @@
   &--close {
     background-image: url("../img/icon/burger-button-close.svg");
   }
+
+  &--nojs {
+    display: none;
+  }
 }
 
 .main-nav__menu {
-  position: absolute;
-  top: 0;
-  left: 0;
   box-sizing: border-box;
-  width: 100%;
   grid-area: menu;
   background-color: #ffffff;
 
   &--hidden {
     display: none;
+  }
+
+  &--js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
   }
 }
 
@@ -151,6 +158,24 @@
     &--medium {
       @include fonts(700, 15px, $color-general, 160%);
     }
+
+    &:hover {
+      color: rgba(0, 0, 0, 0.6);
+    }
+
+    &:active {
+      color: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .main-nav__link:hover > .main-nav__icon {
+    fill: $color-light-accent;
+    opacity: 1;
+  }
+
+  .main-nav__link:active > .main-nav__icon {
+    fill: $color-light-accent;
+    opacity: 0.3;
   }
 
   .main-nav__icon {

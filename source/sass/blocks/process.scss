@@ -1,7 +1,3 @@
-.process {
-  padding-bottom: 58px;
-}
-
 .process__container {
   border: 1px solid #ececec;
   width: 260px;
@@ -44,14 +40,18 @@
 }
 
 @media (min-width: 768px) {
-  .process {
-    padding-bottom: 64px;
-  }
-
   .process__container {
     display: grid;
     width: 668px;
     padding: 0 0 46px;
+
+    &:hover {
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    &:active {
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    }
   }
 
   .process__title {
@@ -82,10 +82,6 @@
 
 
 @media (min-width: 1150px) {
-  .process {
-    padding-bottom: 105px;
-  }
-
   .process__container {
     width: 1050px;
     display: grid;

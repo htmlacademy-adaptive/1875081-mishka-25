@@ -1,8 +1,3 @@
-.about__container {
-  margin-top: 31px;
-  margin-bottom: 58px;
-}
-
 .about__title {
   margin: 0;
   margin-bottom: 28px;
@@ -18,7 +13,6 @@
 .about__item {
   position: relative;
   padding-top: 60px;
-  padding-right: 35%;
 
   @include fonts(700, 17px, $color-general, 118%);
 
@@ -60,14 +54,8 @@
 }
 
 @media (min-width: 768px) {
-  .about__container {
-    margin-bottom: 83px;
-  }
-
   .about__list {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-auto-flow: column;
     column-gap: 100px;
     row-gap: 60px;
   }
@@ -80,6 +68,16 @@
     padding-right: 0;
 
     @include fonts(700, 20px, $color-general, 110%);
+
+    &--style {
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
+
+    &--likes {
+      grid-column: 1/2;
+      grid-row: 3/4;
+    }
   }
 }
 

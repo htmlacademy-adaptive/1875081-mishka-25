@@ -1,7 +1,3 @@
-.forms {
-  padding: 17px 0 55px;
-}
-
 .forms__description {
   margin-bottom: 30px;
 
@@ -141,6 +137,7 @@
 
   &--circle {
     border-radius: 50%;
+    border-color: $color-general;
   }
 }
 
@@ -161,10 +158,6 @@
 }
 
 @media (min-width: 768px) {
-  .forms {
-    padding: 54px 0 50px;
-  }
-
   .forms__description {
     margin-bottom: 13px;
 
@@ -238,6 +231,22 @@
   .form__mark {
     width: 52px;
     height: 52px;
+
+    &:hover {
+      border-color: $color-light-accent;
+    }
+
+    &:active {
+      border-color: rgba(68, 68, 58, 0.3);
+    }
+
+    &--circle:active {
+      border-color: rgba(0, 0, 0, 0.3);
+    }
+
+    &--disabled {
+      opacity: 0.1;
+    }
   }
 
   .form__value {
@@ -249,16 +258,21 @@
 
     @include fonts(400, 19px, $color-secondary, 100%);
 
-    &[type="radio"]:checked {
-      + .form__mark--circle {
-        background-size: 50%;
-      }
+    &[type="radio"]:checked + .form__mark--circle {
+      background-size: 50%;
     }
 
-    &[type="checkbox"]:checked {
-      + .form__mark {
-        background-size: 70%;
-      }
+    &[type="checkbox"]:checked + .form__mark {
+      background-size: 70%;
+    }
+
+    &:hover {
+      border-color: $color-light-accent;
+    }
+
+    &:focus {
+      border-color: $color-light-accent;
+      outline: none;
     }
   }
 
@@ -278,10 +292,6 @@
 }
 
 @media (min-width: 1150px) {
-  .forms {
-    padding: 98px 0 50px;
-  }
-
   .forms__description {
     width: 702px;
     margin-left: auto;

@@ -36,6 +36,14 @@
     display: block;
   }
 
+  .footer__logo:hover svg {
+    fill: $color-light-accent;
+  }
+
+  .footer__logo:active svg {
+    opacity: 0.3;
+  }
+
   .footer__container {
     display: flex;
     justify-content: space-between;
