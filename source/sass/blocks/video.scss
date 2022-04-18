@@ -25,3 +25,27 @@
   display: block;
   margin: 0;
 }
+
+@media (min-width: 768px) {
+  .video__image {
+    width: 668px;
+    height: 455px;
+  }
+
+  .video__button {
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+}
+
+@media (min-width: 1150px) {
+  .video__image {
+    width: 683px;
+    height: 455px;
+  }
+}

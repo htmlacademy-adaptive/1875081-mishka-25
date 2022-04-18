@@ -1,10 +1,14 @@
 .academy {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   padding-top: 27px;
 
   @include fonts (700, 19px, $color-general, 100%);
+}
+
+.academy__text {
+  margin-right: 27px;
 }
 
 @media (min-width: 768px) {

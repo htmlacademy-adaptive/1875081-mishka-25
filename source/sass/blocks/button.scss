@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
 
-  padding: 17px 30px;
+  padding: 14px 30px;
 
   @include fonts(700, 18px, $color-secondary);
   text-transform: uppercase;
@@ -18,9 +18,17 @@
 }
 
 @media (min-width: 768px) {
-  .button {
-    padding: 16px 30px;
+  .button:hover {
+    color: #ffffff;
+    background-color: $color-secondary;
+  }
 
-    @include fonts(700, 17px, $color-secondary, 118%);
+  .button:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: $color-secondary;
+  }
+
+  .button:disabled {
+    opacity: 0.1;
   }
 }
