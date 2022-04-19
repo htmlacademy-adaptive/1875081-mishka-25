@@ -207,6 +207,12 @@
 }
 
 @media (min-width: 1150px) {
+  .main-nav {
+    width: 1050px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
   .main-nav__menu {
     grid-template-columns: 1fr 150px 1fr;
     grid-template-areas: "list1 . list2" "list3 . delivery";
