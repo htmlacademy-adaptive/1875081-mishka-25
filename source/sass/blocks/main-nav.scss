@@ -168,12 +168,12 @@
     }
   }
 
-  .main-nav__link:hover > .main-nav__icon {
+  .main-nav__link:hover .main-nav__icon {
     fill: $color-light-accent;
     opacity: 1;
   }
 
-  .main-nav__link:active > .main-nav__icon {
+  .main-nav__link:active .main-nav__icon {
     fill: $color-light-accent;
     opacity: 0.3;
   }
