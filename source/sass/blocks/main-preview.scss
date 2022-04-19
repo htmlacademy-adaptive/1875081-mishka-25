@@ -1,7 +1,7 @@
 .main-preview {
   width: 100%;
   height: auto;
-  background-color: #fafafa;
+  background-color: #f9f9f9;
   background-image: url("../img/background/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: 50% 0;
@@ -99,5 +99,10 @@
     @media (min-resolution: 2dppx) {
       background-image: url("../img/background/hero-desktop@2x.jpg");
     }
+  }
+
+  .main-preview__list {
+    width: 1050px;
+    margin: 0 auto;
   }
 }

@@ -73,11 +73,6 @@
 
     @include fonts(400, 15px, $color-secondary, 200%);
   }
-
-  .process__button {
-    width: calc(100% - 84px);
-    margin: 0 auto;
-  }
 }
 
 

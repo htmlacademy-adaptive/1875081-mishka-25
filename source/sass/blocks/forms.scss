@@ -276,6 +276,16 @@
     }
   }
 
+  .form__input:hover + .form__contact-image {
+    fill: $color-light-accent;
+    opacity: 1;
+  }
+
+  .form__input:focus + .form__contact-image {
+    fill: $color-light-accent;
+    opacity: 1;
+  }
+
   .form__important {
     margin: auto 0 auto auto;
     grid-column: 2/3;

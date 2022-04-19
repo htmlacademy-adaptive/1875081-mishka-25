@@ -159,21 +159,21 @@
       @include fonts(700, 15px, $color-general, 160%);
     }
 
-    &:hover {
+    &[href]:hover {
       color: rgba(0, 0, 0, 0.6);
     }
 
-    &:active {
+    &[href]:active {
       color: rgba(0, 0, 0, 0.3);
     }
   }
 
-  .main-nav__link:hover > .main-nav__icon {
+  .main-nav__link:hover .main-nav__icon {
     fill: $color-light-accent;
     opacity: 1;
   }
 
-  .main-nav__link:active > .main-nav__icon {
+  .main-nav__link:active .main-nav__icon {
     fill: $color-light-accent;
     opacity: 0.3;
   }
@@ -185,7 +185,10 @@
   }
 
   .main-nav__name-search {
-    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
   }
 
   .main-nav__delivery {
@@ -204,6 +207,12 @@
 }
 
 @media (min-width: 1150px) {
+  .main-nav {
+    width: 1050px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
   .main-nav__menu {
     grid-template-columns: 1fr 150px 1fr;
     grid-template-areas: "list1 . list2" "list3 . delivery";
