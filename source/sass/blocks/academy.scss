@@ -11,6 +11,10 @@
   margin-right: 27px;
 }
 
+.academy__logo {
+  fill: $color-light-accent;
+}
+
 @media (min-width: 768px) {
   .academy {
     padding-top: 0;
@@ -18,5 +22,13 @@
 
   .academy__text {
     margin-right: 25px;
+  }
+
+  .academy__logo:hover {
+    fill: $color-dark-accent;
+  }
+
+  .academy__logo:active {
+    opacity: 0.3;
   }
 }

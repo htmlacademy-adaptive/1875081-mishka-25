@@ -26,6 +26,7 @@
 .modal__title {
   width: 65%;
   margin: 0 auto 14px;
+  text-align: center;
 
   @include fonts(700, 25px, $color-general, 120%);
   text-transform: uppercase;
@@ -35,7 +36,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
 
   border: none;
   margin: 0;
@@ -51,21 +51,18 @@
 }
 
 .modal__label {
-  display: inline-block;
-  box-sizing: border-box;
-
-  padding: 15px 20px;
-  border: 2px solid rgba($color-secondary, 0.1);
-
-  &--checked {
-    border: 2px solid $color-light-accent;
-  }
+  width: 32%;
 }
 
 .modal__value {
-  display: inline-block;
-  width: 38px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+
+  padding: 15px 20px;
+  border: 2px solid rgba($color-secondary, 0.1);
 
   @include fonts(700, 17px, $color-secondary);
 }
@@ -92,17 +89,13 @@
     @include fonts(700, 30px, $color-general, 190%);
   }
 
-  .modal__wrapper {
-    padding: 0 15px;
-  }
-
   .modal__name {
     margin-bottom: 19px;
 
     @include fonts(400, 17px, $color-secondary, 176%);
   }
 
-  .modal__label {
-    padding: 15px 35px;
+  .modal__input:checked + .modal__value {
+    border-color: $color-light-accent;
   }
 }
