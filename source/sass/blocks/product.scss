@@ -1,3 +1,11 @@
+.product:hover .product__wrapper {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product:active .product__wrapper {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
 .product__link {
   text-decoration: none;
 }
@@ -45,19 +53,21 @@
   border: none;
 
   cursor: pointer;
+
+  &:hover svg {
+    fill: $color-light-accent;
+    opacity: 1;
+  }
+
+  &:active svg {
+    fill: $color-light-accent;
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: 768px) {
   .product {
     display: flex;
-  }
-
-  .product:hover .product__wrapper {
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  .product:active .product__wrapper {
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   }
 
   .product__wrapper {
@@ -74,18 +84,6 @@
   .product__inner {
     margin-top: auto;
     width: 268px;
-  }
-
-  .product__button {
-    &:hover > svg {
-      fill: $color-light-accent;
-      opacity: 1;
-    }
-
-    &:active > svg {
-      fill: $color-light-accent;
-      opacity: 0.3;
-    }
   }
 }
 

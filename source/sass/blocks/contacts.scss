@@ -35,6 +35,14 @@
     height: 1px;
     background-color: $color-light-accent;
   }
+
+  &:hover {
+    color: $color-light-accent;
+  }
+
+  &:active::after {
+    opacity: 0.1;
+  }
 }
 
 .contacts__text {
@@ -87,14 +95,6 @@
 
   .contacts__link {
     @include fonts(400, 17px, $color-secondary, 176%);
-
-    &:hover {
-      color: $color-light-accent;
-    }
-
-    &:active::after {
-      opacity: 0.1;
-    }
   }
 
   .contacts__button {

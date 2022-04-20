@@ -15,20 +15,27 @@
   box-sizing: border-box;
 
   cursor: pointer;
-}
 
-@media (min-width: 768px) {
-  .button:hover {
+  &:hover {
     color: #ffffff;
     background-color: $color-secondary;
   }
 
-  .button:active {
+  &:active {
     color: rgba(255, 255, 255, 0.3);
     background-color: $color-secondary;
   }
 
-  .button:disabled {
+  &:disabled {
+    color: $color-secondary;
+    background-color: #ffffff;
     opacity: 0.1;
+    cursor: no-drop;
+  }
+
+  &--disabled {
+    pointer-events: none;
+    opacity: 0.1;
+    cursor: no-drop;
   }
 }

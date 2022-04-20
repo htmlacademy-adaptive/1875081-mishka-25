@@ -2,6 +2,14 @@
   border: 1px solid #ececec;
   width: 260px;
   padding: 21px 0 33px;
+
+  &:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .process__title {
@@ -44,14 +52,6 @@
     display: grid;
     width: 668px;
     padding: 0 0 46px;
-
-    &:hover {
-      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    &:active {
-      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-    }
   }
 
   .process__title {

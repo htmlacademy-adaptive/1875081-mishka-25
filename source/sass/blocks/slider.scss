@@ -67,6 +67,21 @@
   &--next {
     transform: rotate(180deg);
   }
+
+  &:hover {
+    background-color: #ffffff;
+    opacity: 0.6;
+  }
+
+  &:active {
+    background-color: #ffffff;
+    opacity: 0.3;
+  }
+
+  &:disabled {
+    opacity: 0.1;
+    cursor: no-drop;
+  }
 }
 
 @media (min-width: 768px) {
@@ -113,16 +128,6 @@
 
   .slider__toggle {
     border: none;
-
-    &:hover {
-      background-color: #ffffff;
-      opacity: 0.6;
-    }
-
-    &:active {
-      background-color: #ffffff;
-      opacity: 0.3;
-    }
   }
 }
 

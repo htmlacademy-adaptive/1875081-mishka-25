@@ -85,6 +85,24 @@
   @include fonts(700, 17px, $color-general, 141%);
 
   text-decoration: none;
+
+  &[href]:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &[href]:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.main-nav__link:hover .main-nav__icon {
+  fill: $color-light-accent;
+  opacity: 1;
+}
+
+.main-nav__link:active .main-nav__icon {
+  fill: $color-light-accent;
+  opacity: 0.3;
 }
 
 .main-nav__icon {
@@ -158,24 +176,6 @@
     &--medium {
       @include fonts(700, 15px, $color-general, 160%);
     }
-
-    &[href]:hover {
-      color: rgba(0, 0, 0, 0.6);
-    }
-
-    &[href]:active {
-      color: rgba(0, 0, 0, 0.3);
-    }
-  }
-
-  .main-nav__link:hover .main-nav__icon {
-    fill: $color-light-accent;
-    opacity: 1;
-  }
-
-  .main-nav__link:active .main-nav__icon {
-    fill: $color-light-accent;
-    opacity: 0.3;
   }
 
   .main-nav__icon {

@@ -54,6 +54,18 @@
   width: 32%;
 }
 
+.modal__input:checked + .modal__value {
+  border-color: $color-light-accent;
+}
+
+.modal__input:disabled + .modal__value {
+  opacity: 0.1;
+}
+
+.modal__input:checked:disabled + .modal__value {
+  opacity: 0.1;
+}
+
 .modal__value {
   display: flex;
   align-items: center;
@@ -73,6 +85,15 @@
   color: #ffffff;
   width: 100%;
   padding: 14px;
+
+  &:hover {
+    background-color: $color-dark-accent;
+  }
+
+  &:active {
+    background-color: $color-dark-accent;
+    opacity: 0.6;
+  }
 }
 
 @media (min-width: 768px) {
@@ -93,9 +114,5 @@
     margin-bottom: 19px;
 
     @include fonts(400, 17px, $color-secondary, 176%);
-  }
-
-  .modal__input:checked + .modal__value {
-    border-color: $color-light-accent;
   }
 }
