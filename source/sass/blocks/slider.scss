@@ -1,5 +1,5 @@
 .slider__list {
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 
 .slider__item {
@@ -14,7 +14,7 @@
 
 .slider__text {
   margin: 0;
-  margin-bottom: 33px;
+  margin-bottom: 34px;
 
   @include fonts(400, 15px, $color-secondary, 200%);
 }
@@ -22,6 +22,7 @@
 .slider__author {
   display: block;
   max-width: 250px;
+  margin-bottom: 3px;
 
   @include fonts(700, 17px, $color-general, 141%);
 }
@@ -34,7 +35,6 @@
 .slider__toggles {
   position: relative;
   display: flex;
-  margin-bottom: 40px;
 
   &::before {
     content: "";
@@ -49,7 +49,9 @@
 }
 
 .slider__toggle {
+  position: relative;
   flex-grow: 1;
+  min-height: 52px;
   padding-top: 13px;
   padding-bottom: 13px;
   border: 1px solid #ececec;
@@ -57,8 +59,11 @@
 
   &::before {
     content: "";
-    display: block;
-    width: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 53px;
     height: 26px;
     background-image: url("../img/icon/slider-arrow.svg");
     background-repeat: no-repeat;
@@ -66,6 +71,21 @@
 
   &--next {
     transform: rotate(180deg);
+  }
+
+  &:hover {
+    background-color: #ffffff;
+    opacity: 0.6;
+  }
+
+  &:active {
+    background-color: #ffffff;
+    opacity: 0.3;
+  }
+
+  &:disabled {
+    opacity: 0.1;
+    cursor: no-drop;
   }
 }
 
@@ -83,7 +103,7 @@
     display: grid;
     grid-template-columns: 284px auto auto;
     grid-template-rows: auto auto;
-    grid-template-areas: "text text text" "author . .";
+    grid-template-areas: "text text text" "author . ." "social . .";
   }
 
   .slider__text {
@@ -101,10 +121,15 @@
     @include fonts(700, 18px, $color-general, 133%);
   }
 
+  .slider__author-social {
+    grid-area: social;
+  }
+
   .slider__toggles {
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: 41px;
+    width: 175px;
 
     &::before {
       display: none;
@@ -113,16 +138,6 @@
 
   .slider__toggle {
     border: none;
-
-    &:hover {
-      background-color: #ffffff;
-      opacity: 0.6;
-    }
-
-    &:active {
-      background-color: #ffffff;
-      opacity: 0.3;
-    }
   }
 }
 

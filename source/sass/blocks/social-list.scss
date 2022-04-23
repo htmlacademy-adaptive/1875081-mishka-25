@@ -9,15 +9,15 @@
 .social-list__link {
   display: flex;
   align-items: center;
-}
+  justify-content: center;
+  width: 28px;
+  height: 23px;
 
-
-@media (min-width: 768px) {
-  .social-list__link:hover {
+  &:hover {
     fill: $color-light-accent;
   }
 
-  .social-list__link:active {
+  &:active {
     opacity: 0.3;
   }
 }

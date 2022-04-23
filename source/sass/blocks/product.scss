@@ -1,3 +1,11 @@
+.product:hover .product__wrapper {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product:active .product__wrapper {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
 .product__link {
   text-decoration: none;
 }
@@ -17,6 +25,10 @@
   padding: 28px 28px 5px;
 
   @include fonts(700, 17px, $color-general, 141%);
+
+  &--offset {
+    padding: 25px 28px 8px;
+  }
 }
 
 .product__description {
@@ -43,21 +55,24 @@
 .product__button {
   background-color: #ffffff;
   border: none;
+  padding: 0;
 
   cursor: pointer;
+
+  &:hover svg {
+    fill: $color-light-accent;
+    opacity: 1;
+  }
+
+  &:active svg {
+    fill: $color-light-accent;
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: 768px) {
   .product {
     display: flex;
-  }
-
-  .product:hover .product__wrapper {
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  .product:active .product__wrapper {
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   }
 
   .product__wrapper {
@@ -73,19 +88,35 @@
 
   .product__inner {
     margin-top: auto;
-    width: 268px;
+    width: auto;
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+
+  .product__title {
+    padding: 27px 31px 5px;
+
+    @include fonts(700, 20px, $color-general, 120%);
+
+    &--laundry {
+      margin-bottom: 4px;
+    }
+  }
+
+  .product__description {
+    margin: 0 31px 17px;
+
+    @include fonts(400, 15px, $color-secondary, 200%);
+  }
+
+  .product__price {
+    padding: 0 4px;
+
+    @include fonts(700, 17px, $color-general, 141%);
   }
 
   .product__button {
-    &:hover > svg {
-      fill: $color-light-accent;
-      opacity: 1;
-    }
-
-    &:active > svg {
-      fill: $color-light-accent;
-      opacity: 0.3;
-    }
+    padding: 3px 5px;
   }
 }
 

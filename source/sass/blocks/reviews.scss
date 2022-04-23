@@ -22,9 +22,13 @@
   @include fonts(700, 25px, $color-general, 120%);
 }
 
+.reviews__slider {
+  margin-bottom: 35px;
+}
+
 @media (min-width: 768px) {
   .reviews {
-    padding-bottom: 85px;
+    padding-bottom: 60px;
     background-image: url("../img/background/review-bg@1x.png");
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -33,20 +37,26 @@
     &::after {
       height: 17px;
     }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/review-bg@2x.png");
+      background-size: 350px 457px;
+    }
   }
 
   .reviews__container {
     display: grid;
-    row-gap: 38px;
+    row-gap: 40px;
     grid-template-columns: 285px 1fr 175px;
-    grid-template-rows: auto auto;
     margin: 0;
-    padding: 82px 40px 85px 40px;
+    padding: 78px 50px 0 50px;
   }
 
   .reviews__title {
     grid-column: 1/2;
     grid-row: 1/2;
+    margin-bottom: 0;
+    margin-top: auto;
 
     @include fonts(700, 43px, $color-general, 116%);
   }
@@ -59,7 +69,7 @@
   .reviews__button {
     grid-column: 3/4;
     grid-row: 1/2;
-    margin: auto 0;
+    margin-bottom: auto;
   }
 }
 
