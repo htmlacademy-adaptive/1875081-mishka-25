@@ -6,11 +6,20 @@
   padding: 22px 60px;
   border-top: 1px solid #ececec;
   border-bottom: 1px solid #ececec;
+
+  &[href]:hover {
+    opacity: 0.6;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: 768px) {
   .logo {
     position: absolute;
+    z-index: 1;
     padding: 22px 50px;
     border: none;
   }
