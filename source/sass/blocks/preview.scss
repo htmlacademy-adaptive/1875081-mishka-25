@@ -14,9 +14,8 @@
 @media (min-width: 768px) {
   .preview {
     position: relative;
-    z-index: 1;
     background-size: 150%;
-    padding: 101px 0 75px;
+    padding: 101px 0 85px;
 
     &::after {
       content: "";

@@ -7,12 +7,13 @@
 
 .about__list {
   display: grid;
-  gap: 30px;
+  gap: 28px;
 }
 
 .about__item {
   position: relative;
-  padding-top: 60px;
+  padding-top: 55px;
+  width: 90%;
 
   @include fonts(700, 17px, $color-general, 118%);
 
@@ -20,23 +21,29 @@
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
+    left: -5px;
     width: 55px;
     height: 40px;
-    background-position: 0 center;
+    background-position: center center;
     background-repeat: no-repeat;
   }
 
 
   &--eco::before {
+    top: -1px;
+    left: -3px;
     background-image: url("../img/icon/icon-eco.svg");
   }
 
   &--style::before {
+    top: -6px;
+    left: -4px;
     background-image: url("../img/icon/icon-style.svg");
   }
 
   &--likes::before {
+    top: -1px;
+    left: -4px;
     background-image: url("../img/icon/icon-likes.svg");
   }
 
@@ -45,22 +52,27 @@
   }
 
   &--local::before {
+    top: -5px;
     background-image: url("../img/icon/icon-local.svg");
   }
 
   &--gift::before {
+    top: -3px;
+    left: -8px;
     background-image: url("../img/icon/icon-gift.svg");
   }
 }
 
 @media (min-width: 768px) {
   .about__list {
-    grid-template-columns: 1fr 1fr;
-    column-gap: 100px;
-    row-gap: 60px;
+    grid-template-columns: 265px 325px;
+    column-gap: 70px;
+    row-gap: 56px;
   }
 
   .about__title {
+    margin-bottom: 43px;
+
     @include fonts(700, 43px, $color-general, 116%);
   }
 

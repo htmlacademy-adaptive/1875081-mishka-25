@@ -1,13 +1,17 @@
 .main__preview {
   margin-bottom: 31px;
+
+  &--form {
+    margin-bottom: 18px;
+  }
 }
 
 .main__product-week {
-  margin-bottom: 41px;
+  margin-bottom: 31px;
 }
 
 .main__about {
-  margin-bottom: 58px;
+  margin-bottom: 56px;
 }
 
 .main__reviews {
@@ -32,11 +36,19 @@
 
 @media (min-width: 768px) {
   .main__preview {
-    margin-bottom: 40px;
+    margin-bottom: 68px;
+
+    &--index {
+      margin-bottom: 40px;
+    }
+
+    &--form {
+      margin-bottom: 55px;
+    }
   }
 
   .main__product-week {
-    margin-bottom: 50px;
+    margin-bottom: 56px;
   }
 
   .main__about {
@@ -44,7 +56,7 @@
   }
 
   .main__reviews {
-    margin-bottom: 46px;
+    margin-bottom: 45px;
   }
 
   .main__contacts {
@@ -56,17 +68,21 @@
   }
 
   .main__process {
-    margin-bottom: 64px;
+    margin-bottom: 61px;
   }
 
   .main__forms {
-    margin-bottom: 50px;
+    margin-bottom: 46px;
   }
 }
 
 @media (min-width: 1150px) {
   .main__preview {
     margin-bottom: 54px;
+
+    &--index {
+      margin-bottom: 58px;
+    }
   }
 
   .main__product-week {

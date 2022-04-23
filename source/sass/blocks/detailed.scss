@@ -2,8 +2,8 @@
   display: grid;
   box-sizing: border-box;
   width: 100%;
-  grid-template-columns: 1fr 2fr;
-  padding: 12px 0;
+  grid-template-columns: 38% 1fr;
+  padding: 10px 0;
   border-bottom: 1px solid #ececec;
 
   @include fonts(400, 15px, $color-secondary, 133%);
@@ -11,4 +11,22 @@
 
 .detailed__value {
   margin: 0;
+}
+
+@media (min-width: 768px) {
+  .detailed__wrapper {
+    grid-template-columns: 33% 1fr;
+  }
+}
+
+@media (min-width: 1150px) {
+  .detailed__wrapper {
+    grid-template-columns: 34% 1fr;
+    padding-top: 8px;
+    padding-bottom: 13px;
+
+    &:last-child {
+      padding-top: 6px;
+    }
+  }
 }

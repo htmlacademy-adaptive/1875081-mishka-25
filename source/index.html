@@ -12,26 +12,26 @@
 </head>
 <body class="page__body">
   <header class="page__header header">
+    <a class="header__logo logo">
+      <picture>
+        <source media="(min-width: 1150px)" srcset="./img/content/mishka-logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="./img/content/mishka-logo-tablet.svg">
+        <img class="logo__image" src="./img/content/mishka-logo-mobile.svg" width="86" height="35" alt="Магазин игрушек ручной работы Мишка.">
+      </picture>
+    </a>
     <nav class="header__main-nav main-nav">
-      <a class="header__logo logo">
-        <picture>
-          <source media="(min-width: 1150px)" srcset="./img/content/mishka-logo-desktop.svg">
-          <source media="(min-width: 768px)" srcset="./img/content/mishka-logo-tablet.svg">
-          <img class="logo__image" src="./img/content/mishka-logo-mobile.svg" width="86" height="35" alt="Магазин игрушек ручной работы Мишка.">
-        </picture>
-      </a>
       <button class="main-nav__toggle main-nav__toggle--nojs" type="button">
         <span class="visually-hidden">Открыть меню.</span>
       </button>
       <div class="main-nav__menu">
-        <ul class="main-nav__list reset-list">
-          <li class="main-nav__item">
+        <ul class="main-nav__list main-nav__list--index reset-list">
+          <li class="main-nav__item main-nav__item--general">
             <a class="main-nav__link main-nav__link--medium" href="./catalog.html">Каталог товаров</a>
           </li>
-          <li class="main-nav__item">
+          <li class="main-nav__item main-nav__item--general">
             <a class="main-nav__link main-nav__link--medium" href="./form.html">Вязание на заказ</a>
           </li>
-          </ul>
+        </ul>
 
           <ul class="main-nav__users-menu reset-list">
           <li class="main-nav__item main-nav__item--users">
@@ -51,15 +51,15 @@
             </a>
           </li>
         </ul>
-        <ul class="main-nav__new-menu reset-list">
-          <li class="main-nav__item main-nav__item">
+        <ul class="main-nav__new-menu main-nav__new-menu--index reset-list">
+          <li class="main-nav__item">
             <a class="main-nav__link main-nav__link--medium-hidden" href="#">Новые поступления</a>
           </li>
-          <li class="main-nav__item main-nav__item">
+          <li class="main-nav__item">
             <a class="main-nav__link main-nav__link--medium-hidden" href="#">Распродажа</a>
           </li>
         </ul>
-        <p class="main-nav__delivery main-nav__delivery--hidden">Бесплатная доставка по России</p>
+        <p class="main-nav__delivery main-nav__delivery--index">Бесплатная доставка по России</p>
       </div>
     </nav>
   </header>
@@ -67,9 +67,9 @@
   <main class="main">
     <h1 class="visually-hidden">Интернет-магазин товаров ручной работы "Мишка".</h1>
 
-    <section class="main__preview preview main-preview">
-      <h2 class="preview__title   main-preview__title">
-        Милые штуки ручной<br> работы для дома
+    <section class="main__preview main__preview--index preview main-preview">
+      <h2 class="preview__title main-preview__title">
+        Милые штуки ручной работы&nbsp;для дома
       </h2>
       <ul class="main-preview__list reset-list">
         <li class="main-preview__item">
@@ -89,7 +89,7 @@
           <p class="product-week__text">Товар недели</p>
         </header>
         <p class="product-week__description">Экологически чистая пряжа,
-          ручная работа. Доступны в шести расцветках и трёх размерах.</p>
+          ручнаяработа. Доступны в шести расцветках и трёх размерах.</p>
         <dl class="product-week__detailed detailed">
           <div class="detailed__wrapper">
             <dt class="detailed__name">Цвет:</dt>
@@ -111,7 +111,7 @@
             <img class="product-week__image" src="./img/content/product-week.jpg" srcset="./img/content/product-week@2x.jpg 2x" width="260" height="315" alt="Товар недели: вязаные корзинки.">
           </picture>
         </div>
-        <p class="product-week__price">Цена: <span class="product-card__value">990 руб.</span></p>
+        <p class="product-week__price">Цена: <span class="product-week__value">990 руб.</span></p>
         <button class="product-week__button button" type="button">Заказать</button>
       </div>
     </section>
@@ -120,12 +120,12 @@
       <div class="about__container container">
         <h2 class="about__title">Коротко о нас:</h2>
         <ul class="about__list reset-list">
-          <li class="about__item about__item--eco">Экологически чистые материалы</li>
-          <li class="about__item about__item--style">Скандинавский стиль по российской цене</li>
-          <li class="about__item about__item--likes">Увеличивает лайки на фотографиях</li>
-          <li class="about__item about__item--handmade">Связано вручную с любовью и умилением</li>
-          <li class="about__item about__item--local">Поддержка отечественного производителя</li>
-          <li class="about__item about__item--gift">Поставляется в подарочной упаковке</li>
+          <li class="about__item about__item--eco">Экологически чистые&nbsp;материалы</li>
+          <li class="about__item about__item--style">Скандинавский стиль по&nbsp;российской цене</li>
+          <li class="about__item about__item--likes">Увеличивает лайки на&nbsp;фотографиях</li>
+          <li class="about__item about__item--handmade">Связано вручную с&nbsp;любовью и умилением</li>
+          <li class="about__item about__item--local">Поддержка&nbsp;отечественного производителя</li>
+          <li class="about__item about__item--gift">Поставляется в&nbsp;подарочной упаковке</li>
         </ul>
       </div>
     </section>
@@ -137,26 +137,23 @@
           <ul class="slider__list reset-list">
             <li class="slider__item">
               <blockquote class="slider__content">
-                <p class="slider__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-                <cite class="slider__author">Анастасия Красильникова
-                  <a class="slider__author-social" href="#">@misssssiskras</a>
-                </cite>
+                <p class="slider__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у&nbsp;популярных инстамамочек. В&nbsp;отчаянии, я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+                <cite class="slider__author">Анастасия Красильникова</cite>
+                <a class="slider__author-social" href="#">@misssssiskras</a>
               </blockquote>
             </li>
             <li class="slider__item slider__item--hidden">
               <blockquote class="slider__content">
                 <p class="slider__text">Я сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-                <cite class="slider__author">Екатерина Красильникова
-                  <a class="slider__author-social" href="#">@misssssiskras2</a>
-                </cite>
+                <cite class="slider__author">Екатерина Красильникова</cite>
+                <a class="slider__author-social" href="#">@misssssiskras2</a>
               </blockquote>
             </li>
             <li class="slider__item slider__item--hidden">
               <blockquote class="slider__content">
                 <p class="slider__text">Я двоюродная сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-                <cite class="slider__author">Елена Красильникова
-                  <a class="slider__author-social" href="#">@misssssiskras3</a>
-                </cite>
+                <cite class="slider__author">Елена Красильникова</cite>
+                <a class="slider__author-social" href="#">@misssssiskras3</a>
               </blockquote>
             </li>
           </ul>
@@ -183,7 +180,7 @@
           </p>
           <p class="contacts__description">
             <span class="contacts__type">адрес:</span>
-            <span class="contacts__text">г. Санкт-Петербург ул. Большая Конюшенная<br> д. 19/8, офис 101</span>
+            <span class="contacts__text">г. Санкт-Петербург<br> ул. Большая Конюшенная<br> д. 19/8, офис 101</span>
           </p>
         </div>
       </div>
@@ -202,22 +199,22 @@
       </a>
       <ul class="footer__social social-list reset-list">
         <li class="social-list__item">
-          <a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy">
+          <a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy" target="_blank">
             <svg width="28" height="23" role="img" aria-label="Вконтакте.">
               <use xlink:href="./sprite.svg#vk"></use>
             </svg>
           </a>
         </li>
         <li class="social-list__item">
-          <a class="social-list__link social-list__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
-            <svg width="28" height="23" role="img" aria-label="Ютуб.">
+          <a class="social-list__link social-list__link--youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
+            <svg width="25" height="22" role="img" aria-label="Ютуб.">
               <use xlink:href="./sprite.svg#youtube"></use>
             </svg>
           </a>
         </li>
         <li class="social-list__item">
-          <a class="social-list__link social-list__link-tg" href="https://t.me/htmlacademy">
-            <svg width="28" height="23" role="img" aria-label="Телеграм.">
+          <a class="social-list__link social-list__link-tg" href="https://t.me/htmlacademy" target="_blank">
+            <svg width="26" height="20" role="img" aria-label="Телеграм.">
               <use xlink:href="./sprite.svg#tg"></use>
             </svg>
           </a>
@@ -225,7 +222,7 @@
       </ul>
       <div class="footer__academy academy">
         <span class="academy__text">Разработано</span>
-        <a class="academy__logo" href="https://htmlacademy.ru/">
+        <a class="academy__logo" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
           <svg width="27" height="35" role="img" aria-label="HTML Academy.">
             <use xlink:href="./sprite.svg#academy-logo"></use>
           </svg>

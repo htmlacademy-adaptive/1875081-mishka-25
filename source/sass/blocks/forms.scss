@@ -1,5 +1,5 @@
 .forms__description {
-  margin-bottom: 30px;
+  margin-bottom: 29px;
 
   @include fonts(400, 13px, $color-secondary, 185%);
 }
@@ -9,6 +9,11 @@
   padding: 0;
   padding-bottom: 34px;
   border: none;
+
+  &--other {
+    padding-bottom: 0;
+    margin-bottom: 13px;
+  }
 }
 
 .form__title {
@@ -20,6 +25,26 @@
   @include fonts(700, 17px, $color-light-accent, 110%);
   text-transform: uppercase;
 
+  &--color {
+    margin-bottom: 22px;
+  }
+
+  &--names {
+    margin-bottom: 26px;
+  }
+
+  &--tel {
+    margin-bottom: 3px;
+  }
+
+  &--email {
+    margin-bottom: 5px;
+  }
+
+  &--other {
+    margin-bottom: 20px;
+  }
+
   &::after {
     content: "";
     display: block;
@@ -27,14 +52,6 @@
     height: 1px;
     align-self: center;
     background-color: $color-light-accent;
-  }
-
-  &--tel {
-    margin-bottom: 5px;
-  }
-
-  &--email {
-    margin-bottom: 5px;
   }
 
   &--email::after {
@@ -46,7 +63,7 @@
   display: grid;
 
   &--type {
-    row-gap: 11px;
+    row-gap: 14px;
   }
 
   &--color {
@@ -54,7 +71,7 @@
   }
 
   &--name {
-    row-gap: 21px;
+    row-gap: 23px;
   }
 }
 
@@ -96,7 +113,7 @@
 .form__input {
   box-sizing: border-box;
   width: 100%;
-  padding: 17px 40px 17px 0;
+  padding: 17px 40px 13px 0;
 
   @include fonts(400, 17px, $color-secondary, 106%);
 
@@ -207,7 +224,7 @@
   position: absolute;
   bottom: 50%;
   right: 5px;
-  transform: translateY(50%);
+  transform: translateY(100%);
 }
 
 .form__mark {
@@ -238,7 +255,9 @@
 
 .form__button {
   width: 100%;
-  padding: 14px 17px;
+  padding: 16px 20px;
+
+  @include fonts(700, 17px, $color-secondary, 94%);
 }
 
 @media (min-width: 768px) {
@@ -253,6 +272,10 @@
 
     &--dark {
       background-color: $color-bg;
+    }
+
+    &--other {
+      margin-bottom: 0;
     }
   }
 
@@ -270,16 +293,23 @@
   }
 
   .form__label {
+    &--type {
+      column-gap: 26px;
+    }
+
+    &--color {
+      column-gap: 30px;
+    }
+
     &--name {
       display: flex;
-      grid-template-columns: auto;
       align-items: center;
-      column-gap: 25px;
     }
 
     &--tel {
       display: grid;
       grid-template-columns: 1fr 501px;
+      margin-bottom: 24px;
     }
 
     &--email {
@@ -295,6 +325,7 @@
 
     &--color {
       grid-template-columns: repeat(2, 1fr);
+      column-gap: 20px;
       row-gap: 24px;
     }
 
@@ -319,9 +350,14 @@
 
   .form__value {
     @include fonts(700, 19px, $color-general, 100%);
+
+    &--name {
+      margin-right: 25px;
+    }
   }
 
   .form__input {
+    padding-top: 11px;
     padding-left: 17px;
 
     @include fonts(400, 19px, $color-secondary, 100%);
@@ -333,6 +369,11 @@
     &[type="checkbox"]:checked + .form__mark {
       background-size: 70%;
     }
+  }
+
+  .form__contact-image {
+    right: 23px;
+    transform: translateY(50%);
   }
 
   .form__important {

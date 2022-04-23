@@ -4,7 +4,7 @@
   background-color: #f9f9f9;
   background-image: url("../img/background/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: 50% 0;
+  background-position: 50% -10%;
   background-size: 320px auto;
   padding: 73px 0 0 0;
 
@@ -23,10 +23,6 @@
   &--dark {
     background-color: $color-dark-accent;
   }
-
-  &:hover {
-    margin-top: -5px;
-  }
 }
 
 .main-preview__link {
@@ -34,7 +30,7 @@
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  padding: 24px 60% 30px 30px;
+  padding: 25px 60% 30px 30px;
 
   @include fonts(700, 19px, #ffffff, 126%);
   text-decoration: none;
@@ -43,7 +39,7 @@
     content: "";
     position: absolute;
     top: 50%;
-    right: 36px;
+    right: 25px;
     transform: translateY(-50%);
     width: 60px;
     height: 62px;
@@ -59,10 +55,6 @@
   &--dark::after {
     background-image: url("../img/icon/toy.svg");
   }
-
-  &:hover {
-    transform: translateY(-5px);
-  }
 }
 
 .main-preview__link:hover::after {
@@ -77,6 +69,7 @@
   .main-preview {
     background-image: url("../img/background/hero-tablet@1x.jpg");
     background-size: 768px auto;
+    padding-bottom: 12px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/background/hero-tablet@2x.jpg");
@@ -84,17 +77,31 @@
   }
 
   .main-preview__title {
-    margin: 155px 0 372px;
+    margin: 82px 0 371px;
   }
 
   .main-preview__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 0 40px 12px 40px;
+    width: 87%;
+    margin: 0 auto;
+  }
+
+  .main-preview__item {
+    &:hover {
+      margin-top: -5px;
+    }
   }
 
   .main-preview__link {
+    min-height: 119px;
+    padding: 24px 60% 30px 35px;
+
     @include fonts(700, 20px, #ffffff, 150%);
+
+    &:hover {
+      transform: translateY(-5px);
+    }
   }
 }
 
@@ -108,8 +115,19 @@
     }
   }
 
+  .main-preview__title {
+    width: 700px;
+    margin: 84px auto 355px;
+  }
+
   .main-preview__list {
     width: 1050px;
     margin: 0 auto;
+  }
+
+  .main-preview__link {
+    &--dark::after {
+      right: 35px;
+    }
   }
 }

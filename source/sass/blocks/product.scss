@@ -25,6 +25,10 @@
   padding: 28px 28px 5px;
 
   @include fonts(700, 17px, $color-general, 141%);
+
+  &--offset {
+    padding: 25px 28px 8px;
+  }
 }
 
 .product__description {
@@ -51,6 +55,7 @@
 .product__button {
   background-color: #ffffff;
   border: none;
+  padding: 0;
 
   cursor: pointer;
 
@@ -83,7 +88,35 @@
 
   .product__inner {
     margin-top: auto;
-    width: 268px;
+    width: auto;
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+
+  .product__title {
+    padding: 27px 31px 5px;
+
+    @include fonts(700, 20px, $color-general, 120%);
+
+    &--laundry {
+      margin-bottom: 4px;
+    }
+  }
+
+  .product__description {
+    margin: 0 31px 17px;
+
+    @include fonts(400, 15px, $color-secondary, 200%);
+  }
+
+  .product__price {
+    padding: 0 4px;
+
+    @include fonts(700, 17px, $color-general, 141%);
+  }
+
+  .product__button {
+    padding: 3px 5px;
   }
 }
 

@@ -9,6 +9,9 @@
 .social-list__link {
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 23px;
 
   &:hover {
     fill: $color-light-accent;

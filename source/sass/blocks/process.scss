@@ -1,4 +1,5 @@
 .process__container {
+  box-sizing: border-box;
   border: 1px solid #ececec;
   width: 260px;
   padding: 21px 0 33px;
@@ -34,7 +35,7 @@
 
 .process__description {
   width: 195px;
-  margin: 35px auto 41px;
+  margin: 35px auto 42px;
 
   @include fonts(400, 13px, $color-secondary, 185%);
 }
@@ -43,7 +44,7 @@
   display: block;
   width: 192px;
   margin: 0 auto;
-  padding: 17px 15px;
+  padding: 14px 15px;
   text-decoration: none;
 }
 
@@ -54,11 +55,17 @@
     padding: 0 0 46px;
   }
 
+  .process__video {
+    width: 100%;
+    margin-bottom: 38px;
+  }
+
   .process__title {
     grid-row: 2/3;
-    margin-top: 38px;
     padding-top: 3px;
     padding-left: 107px;
+    margin: 0;
+    margin-bottom: 23px;
 
     @include fonts(700, 20px, $color-general, 120%);
 
@@ -70,8 +77,17 @@
 
   .process__description {
     width: 585px;
+    margin-top: 0;
+    margin-bottom: 41px;
 
     @include fonts(400, 15px, $color-secondary, 200%);
+  }
+
+  .process__button {
+    width: 87.8%;
+    font-size: 17px;
+    padding-top: 16px;
+    padding-bottom: 13px;
   }
 }
 
