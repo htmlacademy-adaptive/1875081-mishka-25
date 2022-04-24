@@ -96,9 +96,16 @@
 @media (min-width: 1150px) {
   .about__container {
     width: 65%;
+    margin-left: 175px;
   }
 
   .about__title {
+    margin-bottom: 40px;
+
     @include fonts(700, 53px, $color-general, 108%);
+  }
+
+  .about__list {
+    column-gap: 85px;
   }
 }

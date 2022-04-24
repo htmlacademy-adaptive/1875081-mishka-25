@@ -8,7 +8,7 @@
   &--js {
     position: absolute;
     z-index: 1;
-    top: 85px;
+    top: 80px;
     left: 0;
     width: 100%;
   }
@@ -16,8 +16,8 @@
 
 .main-nav__toggle {
   position: absolute;
-  top: 27px;
-  right: 30px;
+  top: 26px;
+  right: 28px;
 
   width: 26px;
   height: 26px;
@@ -51,7 +51,7 @@
 .main-nav__link {
   position: relative;
   display: block;
-  padding: 28px 33px 27px 76px;
+  padding: 28px 33px 26px 76px;
 
   @include fonts(700, 17px, $color-general, 141%);
   text-decoration: none;
@@ -134,15 +134,19 @@
     &--users {
       border-left: 1px solid #ececec;
     }
+
+    &--general:nth-child(odd) {
+      margin-right: 16px;
+    }
   }
 
   .main-nav__link {
     box-sizing: border-box;
     height: 100%;
-    padding: 20px 30px 20px 0;
+    padding: 20px 20px 20px 0;
 
     &--basket {
-      padding: 33px 0 32px 83px;
+      padding: 33px 0 31px 83px;
     }
 
     &--search {
@@ -150,8 +154,8 @@
       align-items: center;
       justify-content: center;
       box-sizing: border-box;
-      width: 84px;
-      padding: 36px 30px;
+      width: 82px;
+      padding: 35px 30px;
     }
 
     &--medium {
@@ -251,7 +255,11 @@
   .main-nav__item {
     &--general:nth-child(odd) {
       border-right: 1px solid #ececec;
-      margin-right: 10px;
+      margin-right: 35px;
+    }
+
+    &--new {
+      margin-right: 33px;
     }
   }
 
@@ -259,11 +267,19 @@
     display: flex;
     align-items: center;
 
+    &--basket {
+      padding-left: 85px;
+    }
+
     &--medium {
+      padding: 20px 35px 19px 0;
+
       @include fonts(700, 17px, $color-general, 141%);
     }
 
     &--medium-hidden {
+      padding-right: 30px;
+
       @include fonts(700, 15px, $color-general, 160%);
     }
   }

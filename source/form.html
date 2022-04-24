@@ -13,13 +13,15 @@
 <body class="page__body">
   <header class="page__header header">
     <nav class="header__main-nav main-nav">
-      <a class="header__logo logo" href="./index.html">
-        <picture>
-          <source media="(min-width: 1150px)" srcset="./img/content/mishka-logo-desktop.svg">
-          <source media="(min-width: 768px)" srcset="./img/content/mishka-logo-tablet.svg">
-          <img class="logo__image" src="./img/content/mishka-logo-mobile.svg" width="86" height="35" alt="Магазин игрушек ручной работы Мишка.">
-        </picture>
-      </a>
+      <div class="header__logo-wrapper">
+        <a class="header__logo logo" href="./index.html">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="./img/content/mishka-logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="./img/content/mishka-logo-tablet.svg">
+            <img class="logo__image" src="./img/content/mishka-logo-mobile.svg" width="86" height="35" alt="Магазин игрушек ручной работы Мишка.">
+          </picture>
+        </a>
+      </div>
       <button class="main-nav__toggle main-nav__toggle--nojs" type="button">
         <span class="visually-hidden">Открыть меню.</span>
       </button>
@@ -52,10 +54,10 @@
           </li>
         </ul>
         <ul class="main-nav__new-menu reset-list">
-          <li class="main-nav__item">
+          <li class="main-nav__item main-nav__item--new">
             <a class="main-nav__link main-nav__link--medium-hidden" href="#">Новые поступления</a>
           </li>
-          <li class="main-nav__item">
+          <li class="main-nav__item main-nav__item--new">
             <a class="main-nav__link main-nav__link--medium-hidden" href="#">Распродажа</a>
           </li>
         </ul>
@@ -76,8 +78,10 @@
       <p class="forms__description container">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
       <form class="form" action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="form__fieldset">
-          <div class="form__container container">
-            <p class="form__title">Тип</p>
+          <div class="form__container form__container--type container">
+            <div class="form__title-line">
+                <h3 class="form__title">Тип</h3>
+            </div>
             <div class="form__wrapper form__wrapper--type">
               <label class="form__label form__label--type">
                 <input class="form__input visually-hidden" type="radio" name="type" value="Interior" checked>
@@ -94,7 +98,9 @@
         </fieldset>
         <fieldset class="form__fieldset form__fieldset--dark">
           <div class="form__container container">
-            <p class="form__title form__title--color">Цвет</p>
+            <div class="form__title-line">
+              <h3 class="form__title form__title--color">Цвет</h3>
+            </div>
             <div class="form__wrapper form__wrapper--color">
               <label class="form__label form__label--color">
                 <input class="form__input visually-hidden" type="checkbox" name="color" value="white" checked>
@@ -131,7 +137,9 @@
         </fieldset>
         <fieldset class="form__fieldset form__fieldset--name">
           <div class="form__container container">
-            <p class="form__title form__title--names">ФИО</p>
+            <div class="form__title-line">
+              <h3 class="form__title form__title--names">ФИО</h3>
+            </div>
             <div class="form__wrapper form__wrapper--name">
               <label class="form__label form__label--name">
                 <span class="form__value form__value--name">Имя:</span>
@@ -150,25 +158,36 @@
         </fieldset>
         <fieldset class="form__fieldset form__fieldset--dark">
           <div class="form__container form__container--contacts container">
-            <label class="form__label form__label--tel">
-              <span class="form__title form__title--tel">Тел</span>
-              <input class="form__input" type="tel" name="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
-              <svg class="form__contact-image" width="25" height="24" opacity="0.2">
-                <use xlink:href="./sprite.svg#tel"></use>
-              </svg>
-            </label>
-            <label class="form__label form__label--email">
-              <span class="form__title form__title--email">E-mail</span>
-              <input class="form__input" type="email" name="email" placeholder="Ваш Email*" required>
-              <svg class="form__contact-image" width="32" height="21" opacity="0.2">
-                <use xlink:href="./sprite.svg#post"></use>
-              </svg>
-            </label>
+            <div class="form__label form__label--tel">
+              <div class="form__title-line">
+                <h3 class="form__title form__title--tel">Тел</h3>
+              </div>
+              <label>
+                <input class="form__input form__input--tel" type="tel" name="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+                <svg class="form__contact-image" width="25" height="24" opacity="0.2">
+                  <use xlink:href="./sprite.svg#tel"></use>
+                </svg>
+              </label>
+            </div>
+
+            <div class="form__label form__label--email">
+              <div class="form__title-line">
+                <h3 class="form__title form__title--email">E-mail</h3>
+              </div>
+              <label>
+                <input class="form__input" type="email" name="email" placeholder="Ваш Email*" required>
+                <svg class="form__contact-image" width="32" height="21" opacity="0.2">
+                  <use xlink:href="./sprite.svg#post"></use>
+                </svg>
+              </label>
+            </div>
           </div>
         </fieldset>
         <fieldset class="form__fieldset form__fieldset--other">
           <div class="form__container container">
-            <p class="form__title form__title--other">Доп</p>
+            <div class="form__title-line">
+              <h3 class="form__title form__title--other">Доп</h3>
+            </div>
             <label class="form__label">
               <span class="visually-hidden">Опишите все ваши пожелания к заказу.</span>
               <textarea class="form__input form__input--comment" name="wishes" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>

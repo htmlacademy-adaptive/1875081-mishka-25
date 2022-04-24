@@ -23,12 +23,12 @@
 }
 
 .reviews__slider {
-  margin-bottom: 35px;
+  margin-bottom: 37px;
 }
 
 @media (min-width: 768px) {
   .reviews {
-    padding-bottom: 60px;
+    padding-bottom: 58px;
     background-image: url("../img/background/review-bg@1x.png");
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -75,16 +75,15 @@
 
 @media (min-width: 1150px) {
   .reviews {
-    padding-bottom: 90px;
-
     &::after {
       height: 23px;
     }
   }
 
   .reviews__container {
+    row-gap: 33px;
     width: auto;
-    padding: 78px 50px 67px 174px;
+    padding: 78px 0 0 174px;
   }
 
   .reviews__title {
