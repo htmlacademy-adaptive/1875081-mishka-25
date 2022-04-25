@@ -3,9 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 22px 60px;
-  border-top: 1px solid #ececec;
-  border-bottom: 1px solid #ececec;
+  width: 120px;
 
   &[href]:hover {
     opacity: 0.6;
@@ -18,10 +16,7 @@
 
 @media (min-width: 768px) {
   .logo {
-    position: absolute;
-    z-index: 1;
-    padding: 22px 50px;
-    border: none;
+    width: 113px;
   }
 
   .logo__image {
@@ -31,15 +26,6 @@
 }
 
 @media (min-width: 1150px) {
-  .logo {
-    position: absolute;
-    top: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 5px 10px;
-    border: none;
-  }
-
   .logo__image {
     width: 149px;
     height: 72px;

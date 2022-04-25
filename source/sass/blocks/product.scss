@@ -129,4 +129,29 @@
     width: 316px;
     height: 462px;
   }
+
+  .product__title {
+    padding: 27px 27px 4px;
+
+    &--laundry {
+      padding-bottom: 0;
+    }
+  }
+
+  .product__description {
+    margin: 0 27px 13px;
+  }
+
+  .product__inner {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .product__price {
+    padding: 0;
+  }
+
+  .product__button {
+    padding: 0 2px;
+  }
 }

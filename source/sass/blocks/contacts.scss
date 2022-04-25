@@ -135,7 +135,8 @@
     grid-area: contacts;
     box-sizing: border-box;
     width: 91.3%;
-    margin-top: 59px;
+    margin-top: 57px;
+    margin-left: 64px;
     padding-left: 109px;
 
     &::before {
@@ -152,7 +153,7 @@
 
   .contacts__wrapper {
     display: grid;
-    row-gap: 25px;
+    row-gap: 30px;
     width: 300px;
     margin-bottom: 84px;
   }
@@ -162,10 +163,16 @@
     margin-bottom: 0;
   }
 
+  .contacts__link {
+    &::after {
+      bottom: -5px;
+    }
+  }
+
   .contacts__button {
     grid-area: contacts-button;
     width: 230px;
-    margin-left: 160px;
+    margin-left: 175px;
     margin-bottom: auto;
   }
 }

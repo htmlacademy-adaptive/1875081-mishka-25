@@ -27,7 +27,7 @@
 }
 
 .main__process {
-  margin-bottom: 58px;
+  margin-bottom: 57px;
 }
 
 .main__forms {
@@ -72,16 +72,20 @@
   }
 
   .main__forms {
-    margin-bottom: 46px;
+    margin-bottom: 49px;
   }
 }
 
 @media (min-width: 1150px) {
   .main__preview {
-    margin-bottom: 54px;
+    margin-bottom: 111px;
 
     &--index {
       margin-bottom: 58px;
+    }
+
+    &--form {
+      margin-bottom: 99px;
     }
   }
 
@@ -96,12 +100,12 @@
 
   .main__reviews {
     width: 1050px;
-    margin: 0 auto 71px;
+    margin: 0 auto 68px;
   }
 
   .main__contacts {
     width: 1050px;
-    margin: 0 auto 105px;
+    margin: 0 auto 104px;
   }
 
   .main__catalog {
@@ -109,6 +113,6 @@
   }
 
   .main__process {
-    margin-bottom: 105px;
+    margin-bottom: 103px;
   }
 }

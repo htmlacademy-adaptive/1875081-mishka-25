@@ -1,5 +1,5 @@
 .forms__description {
-  margin-bottom: 29px;
+  margin-bottom: 28px;
 
   @include fonts(400, 13px, $color-secondary, 185%);
 }
@@ -7,7 +7,7 @@
 .form__fieldset {
   margin: 0;
   padding: 0;
-  padding-bottom: 34px;
+  padding-bottom: 32px;
   border: none;
 
   &--other {
@@ -17,45 +17,47 @@
 }
 
 .form__title {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr;
   margin: 0;
   margin-bottom: 30px;
+  width: 100%;
+  background-color: #ffffff;
 
   @include fonts(700, 17px, $color-light-accent, 110%);
   text-transform: uppercase;
 
   &--color {
-    margin-bottom: 22px;
+    margin-bottom: 23px;
   }
 
   &--names {
-    margin-bottom: 26px;
+    margin-bottom: 28px;
   }
 
   &--tel {
-    margin-bottom: 3px;
+    margin-bottom: 2px;
   }
 
   &--email {
-    margin-bottom: 5px;
+    margin-bottom: 4px;
   }
 
   &--other {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   }
 
   &::after {
     content: "";
-    display: block;
-    width: 80%;
     height: 1px;
-    align-self: center;
+    display: block;
     background-color: $color-light-accent;
+    margin-left: 20px;
   }
 
-  &--email::after {
-    width: 75%;
+  &--tel::after {
+    margin-left: 28px;
   }
 }
 
@@ -63,7 +65,7 @@
   display: grid;
 
   &--type {
-    row-gap: 14px;
+    row-gap: 11px;
   }
 
   &--color {
@@ -123,9 +125,13 @@
 
   cursor: pointer;
 
+  &--tel {
+    padding-bottom: 17px;
+  }
+
   &--comment {
     height: 142px;
-    padding: 17px;
+    padding: 16px;
 
     border: 2px solid $color-secondary;
     box-shadow: none;
@@ -224,7 +230,7 @@
   position: absolute;
   bottom: 50%;
   right: 5px;
-  transform: translateY(100%);
+  transform: translateY(95%);
 }
 
 .form__mark {
@@ -237,8 +243,9 @@
   cursor: pointer;
 
   &--circle {
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    border-color: $color-general;
   }
 }
 
@@ -283,6 +290,10 @@
     display: grid;
     grid-template-columns: 1fr 501px;
 
+    &--type {
+      grid-template-columns: 1fr 499px;
+    }
+
     &--contacts {
       grid-template-columns: 1fr;
     }
@@ -325,7 +336,7 @@
 
     &--color {
       grid-template-columns: repeat(2, 1fr);
-      column-gap: 20px;
+      column-gap: 22px;
       row-gap: 24px;
     }
 
@@ -334,13 +345,13 @@
     }
   }
 
+  .form__title::after {
+    content: none;
+  }
+
   .form__title {
     margin-block-start: 1em;
-    margin-block-end: 1em;
-
-    &::after {
-      display: none;
-    }
+    background-color: transparent;
   }
 
   .form__mark {
@@ -361,6 +372,14 @@
     padding-left: 17px;
 
     @include fonts(400, 19px, $color-secondary, 100%);
+
+    &--tel {
+      padding-bottom: 13px;
+    }
+
+    &--comment {
+      padding: 16px;
+    }
 
     &[type="radio"]:checked + .form__mark--circle {
       background-size: 50%;
@@ -398,9 +417,17 @@
     margin-right: auto;
   }
 
+  .form__fieldset {
+    padding: 49px 0 50px 0;
+
+    &--other {
+      padding-bottom: 46px;
+    }
+  }
+
   .form__container {
     box-sizing: border-box;
-    padding: 0 175px 0 47px;
+    padding: 0 175px 0 60px;
 
     grid-template-columns: 1fr 700px;
 
@@ -416,6 +443,7 @@
   .form__wrapper {
     &--color {
       grid-template-columns: repeat(3, 1fr);
+      column-gap: 97px;
     }
   }
 
@@ -429,5 +457,21 @@
       display: grid;
       grid-template-columns: 1fr 700px;
     }
+  }
+
+  .form__input {
+    padding-bottom: 14px;
+
+    &--tel {
+      padding-bottom: 12px;
+    }
+  }
+
+  .form__contact-image {
+    right: 4px;
+  }
+
+  .form__button {
+    margin-left: 115px;
   }
 }
