@@ -2352,24 +2352,13 @@
   margin-bottom: 13px;
 }
 
-.form__title-line {
-  position: relative;
-  z-index: 1;
-}
-.form__title-line::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  z-index: -1;
-  width: 100%;
-  height: 1px;
-  background-color: #63d1bb;
-}
-
 .form__title {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr;
   margin: 0;
   margin-bottom: 30px;
-  width: 60px;
+  width: 100%;
   background-color: #ffffff;
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 17px;
@@ -2390,10 +2379,19 @@
 }
 .form__title--email {
   margin-bottom: 4px;
-  width: 78px;
 }
 .form__title--other {
   margin-bottom: 22px;
+}
+.form__title::after {
+  content: "";
+  height: 1px;
+  display: block;
+  background-color: #63d1bb;
+  margin-left: 20px;
+}
+.form__title--tel::after {
+  margin-left: 28px;
 }
 
 .form__wrapper {
@@ -2642,7 +2640,7 @@
     row-gap: 24px;
   }
 
-  .form__title-line::before {
+  .form__title::after {
     content: none;
   }
 
