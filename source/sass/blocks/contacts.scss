@@ -54,7 +54,9 @@
 }
 
 .contacts__map {
-  margin-bottom: 39px;
+  width: 100%;
+  min-height: 455px;
+  margin: 0 auto 39px;
 }
 
 .contacts__button {
@@ -111,6 +113,7 @@
   }
 
   .contacts__map {
+    height: 457px;
     margin-bottom: 55px;
   }
 

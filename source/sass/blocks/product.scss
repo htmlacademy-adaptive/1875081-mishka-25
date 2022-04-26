@@ -29,6 +29,14 @@
   &--offset {
     padding: 25px 28px 8px;
   }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .product__description {

@@ -10,6 +10,14 @@
 
 .footer__logo {
   display: none;
+
+  &[href]:hover {
+    fill: $color-light-accent;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
 }
 
 .footer__social {
@@ -24,14 +32,6 @@
 
   .footer__logo {
     display: block;
-  }
-
-  .footer__logo:hover svg {
-    fill: $color-light-accent;
-  }
-
-  .footer__logo:active svg {
-    opacity: 0.3;
   }
 
   .footer__container {

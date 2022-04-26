@@ -78,6 +78,10 @@
   border: 2px solid rgba($color-secondary, 0.1);
 
   @include fonts(700, 17px, $color-secondary);
+
+  &:hover {
+    border-color: rgba(68, 68, 68, 0.3);
+  }
 }
 
 .modal__button {
