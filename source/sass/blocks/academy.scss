@@ -4,6 +4,7 @@
   justify-content: center;
   padding-top: 22px;
   border-top: 1px solid #e5e5e5;
+  width: 260px;
 
   @include fonts (700, 19px, $color-general, 100%);
 }

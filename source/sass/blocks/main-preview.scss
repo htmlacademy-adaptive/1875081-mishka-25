@@ -24,6 +24,11 @@
   &--dark {
     background-color: $color-dark-accent;
   }
+
+  &:hover {
+    margin-top: -5px;
+    padding-bottom: 5px;
+  }
 }
 
 .main-preview__link {
@@ -97,12 +102,6 @@
     grid-template-columns: repeat(2, 1fr);
     width: 87%;
     margin: 0 auto;
-  }
-
-  .main-preview__item {
-    &:hover {
-      margin-top: -5px;
-    }
   }
 
   .main-preview__link {

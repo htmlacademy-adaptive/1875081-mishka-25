@@ -65,7 +65,7 @@
 
 @media (min-width: 768px) {
   .about__list {
-    grid-template-columns: 265px 325px;
+    grid-template-columns: 265px auto;
     column-gap: 70px;
     row-gap: 56px;
   }
