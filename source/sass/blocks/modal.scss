@@ -35,12 +35,13 @@
 
 .modal__wrapper {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  align-content: space-between;
   justify-content: space-between;
 
   border: none;
   margin: 0;
-  margin-bottom: 31px;
+  margin-bottom: 26px;
   padding: 0;
 }
 
@@ -53,6 +54,7 @@
 
 .modal__label {
   width: 32%;
+  margin-bottom: 5px;
 }
 
 .modal__input:checked + .modal__value {

@@ -63,6 +63,10 @@
   }
 }
 
+.about__item br {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .about__list {
     grid-template-columns: 265px auto;
@@ -90,6 +94,10 @@
       grid-column: 1/2;
       grid-row: 3/4;
     }
+  }
+
+  .about__item br {
+    display: block;
   }
 }
 
