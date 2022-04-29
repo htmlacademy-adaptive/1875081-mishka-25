@@ -8,6 +8,11 @@
 
 .product__link {
   text-decoration: none;
+
+  &:focus-visible {
+    outline: 1px solid $color-light-accent;
+    outline-offset: 2px;
+  }
 }
 
 .product__image {
@@ -72,6 +77,11 @@
     opacity: 1;
   }
 
+  &:focus-visible {
+    outline: 1px solid $color-light-accent;
+    outline-offset: 2px;
+  }
+
   &:active svg {
     fill: $color-light-accent;
     opacity: 0.3;
@@ -81,6 +91,7 @@
 @media (min-width: 768px) {
   .product {
     display: flex;
+    width: 100%;
   }
 
   .product__wrapper {

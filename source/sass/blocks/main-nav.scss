@@ -60,6 +60,10 @@
     color: rgba(0, 0, 0, 0.6);
   }
 
+  &[href]:focus-visible {
+    outline: 1px solid $color-light-accent;
+  }
+
   &[href]:active {
     color: rgba(0, 0, 0, 0.3);
   }

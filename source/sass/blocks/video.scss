@@ -24,6 +24,11 @@
     transform: translate(-50%, -50%) scale(1.1);
   }
 
+  &:focus-visible {
+    outline: 1px solid $color-light-accent;
+    outline-offset: 2px;
+  }
+
   &:active {
     transform: translate(-50%, -50%) scale(0.9);
   }

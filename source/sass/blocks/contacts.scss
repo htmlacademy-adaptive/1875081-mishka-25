@@ -50,6 +50,11 @@
     }
   }
 
+  &:focus-visible {
+    outline: 1px solid $color-light-accent;
+    outline-offset: 2px;
+  }
+
   &:active::after {
     opacity: 0.1;
   }

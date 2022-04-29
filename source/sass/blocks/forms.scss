@@ -215,9 +215,14 @@
     }
   }
 
-  &:focus {
+  &:focus-visible {
     border-color: $color-light-accent;
     outline: none;
+
+    + .form__mark {
+      outline: 1px solid $color-light-accent;
+      outline-offset: 2px;
+    }
 
     + .form__contact-image {
       fill: $color-light-accent;
@@ -326,13 +331,11 @@
       display: grid;
       grid-template-columns: 1fr 501px;
       margin-bottom: 24px;
-      align-items: center;
     }
 
     &--email {
       display: grid;
       grid-template-columns: 1fr 501px;
-      align-items: center;
     }
   }
 
@@ -405,7 +408,8 @@
   }
 
   .form__important {
-    margin: auto 0 auto 50px;
+    margin: auto 0 auto auto;
+    padding-left: 50px;
     grid-column: 2/3;
     grid-row: 1/2;
 
