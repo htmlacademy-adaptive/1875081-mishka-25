@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вязание на заказ</title>
+  <link rel="icon" href="./favicon-32x32.ico">
+  <link rel="icon" href="./img/favicons/favicon-152.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./img/favicons/apple-icon-180x180.png">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./css/style.css">
+  <base href="https://htmlacademy-adaptive.github.io/1875081-mishka-25/10/">
+</head>
+<body class="page__body">
+  <header class="page__header header">
+    <nav class="header__main-nav main-nav">
+      <div class="header__logo-wrapper">
+        <a class="header__logo logo" href="./index.html">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="./img/content/mishka-logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="./img/content/mishka-logo-tablet.svg">
+            <img class="logo__image" src="./img/content/mishka-logo-mobile.svg" width="86" height="35" alt="Магазин игрушек ручной работы Мишка.">
+          </picture>
+        </a>
+      </div>
+      <button class="main-nav__toggle main-nav__toggle--nojs" type="button">
+        <span class="visually-hidden">Открыть меню.</span>
+      </button>
+      <div class="main-nav__menu">
+        <ul class="main-nav__list reset-list">
+          <li class="main-nav__item main-nav__item--general">
+            <a class="main-nav__link main-nav__link--medium" href="./catalog.html">Каталог товаров</a>
+          </li>
+          <li class="main-nav__item main-nav__item--general">
+            <a class="main-nav__link main-nav__link--medium">Вязание на заказ</a>
+          </li>
+          </ul>
+
+          <ul class="main-nav__users-menu reset-list">
+          <li class="main-nav__item main-nav__item--users">
+            <a class="main-nav__link main-nav__link--search" href="#">
+              <svg class="main-nav__icon main-nav__icon--search" width="18" height="18" opacity="0.2" role="img" aria-hidden="true" focusable="false">
+                <use xlink:href="./img/sprite.svg#search"></use>
+              </svg>
+              <span class="main-nav__name-search">Поиск по сайту</span>
+            </a>
+          </li>
+          <li class="main-nav__item main-nav__item--users">
+            <a class="main-nav__link main-nav__link--basket" href="#">
+              <svg class="main-nav__icon" width="21" height="18" opacity="0.2" role="img" aria-hidden="true" focusable="false">
+                <use xlink:href="./img/sprite.svg#cart"></use>
+              </svg>
+              <span>Корзина: <span class="main-nav__value">пока пуста</span></span>
+            </a>
+          </li>
+        </ul>
+        <ul class="main-nav__new-menu reset-list">
+          <li class="main-nav__item main-nav__item--new">
+            <a class="main-nav__link main-nav__link--medium-hidden" href="#">Новые поступления</a>
+          </li>
+          <li class="main-nav__item main-nav__item--new">
+            <a class="main-nav__link main-nav__link--medium-hidden" href="#">Распродажа</a>
+          </li>
+        </ul>
+        <p class="main-nav__delivery">Бесплатная доставка по России</p>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="main__preview main__preview--form preview">
+      <h1 class="preview__title">
+        Вязание на заказ
+      </h1>
+    </section>
+
+    <section class="main__forms forms">
+      <h2 class="visually-hidden">Форма для оформления заказа.</h2>
+      <p class="forms__description container">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+      <form class="form" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="form__fieldset">
+          <div class="form__container form__container--type container">
+            <h3 class="form__title">Тип</h3>
+            <div class="form__wrapper form__wrapper--type">
+              <label class="form__label form__label--type">
+                <input class="form__input visually-hidden" type="radio" name="type" value="Interior" checked>
+                <span class="form__mark form__mark--circle"></span>
+                <span class="form__value">Аксессуар для интерьера</span>
+              </label>
+              <label class="form__label form__label--type">
+                <input class="form__input visually-hidden" type="radio" name="type" value="Toy">
+                <span class="form__mark form__mark--circle"></span>
+                <span class="form__value">Детская игрушка</span>
+              </label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="form__fieldset form__fieldset--dark">
+          <div class="form__container container">
+            <h3 class="form__title form__title--color">Цвет</h3>
+            <div class="form__wrapper form__wrapper--color">
+              <label class="form__label form__label--color">
+                <input class="form__input visually-hidden" type="checkbox" name="color" value="white" checked>
+                <span class="form__mark"></span>
+                <span class="form__value">Белый</span>
+              </label>
+              <label class="form__label form__label--color">
+                <input class="form__input visually-hidden" type="checkbox" name="color" value="gray" checked>
+                <span class="form__mark"></span>
+                <span class="form__value">Серый</span>
+              </label>
+              <label class="form__label form__label--color">
+                <input class="form__input visually-hidden" type="checkbox" name="color" value="tiffany">
+                <span class="form__mark"></span>
+                <span class="form__value">Тиффани</span>
+              </label>
+              <label class="form__label form__label--color">
+                <input class="form__input visually-hidden" type="checkbox" name="color" value="black">
+                <span class="form__mark"></span>
+                <span class="form__value">Черный</span>
+              </label>
+              <label class="form__label form__label--color">
+                <input class="form__input visually-hidden" type="checkbox" name="color" value="pink">
+                <span class="form__mark"></span>
+                <span class="form__value">Розовый</span>
+              </label>
+              <label class="form__label form__label--color">
+                <input class="form__input visually-hidden" type="checkbox" name="color" value="orange">
+                <span class="form__mark"></span>
+                <span class="form__value">Оранжевый</span>
+              </label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="form__fieldset form__fieldset--name">
+          <div class="form__container container">
+            <h3 class="form__title form__title--names">ФИО</h3>
+            <div class="form__wrapper form__wrapper--name">
+              <label class="form__label form__label--name">
+                <span class="form__value form__value--name">Имя:</span>
+                <input class="form__input" type="text" name="name" placeholder="Введите ваше имя*" required>
+              </label>
+              <label class="form__label form__label--name">
+                <span class="form__value form__value--name">Фамилия:</span>
+                <input class="form__input" type="text" name="surname" placeholder="Укажите фамилию*" required>
+              </label>
+              <label class="form__label form__label--name">
+                <span class="form__value form__value--name">Отчество:</span>
+                <input class="form__input" type="text" name="patronymic" placeholder="Отчество, если желаете">
+              </label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="form__fieldset form__fieldset--dark">
+          <div class="form__container form__container--contacts container">
+            <div class="form__label form__label--tel">
+              <h3 class="form__title form__title--tel">Тел</h3>
+              <label class="form__label-wrapper">
+                <span class="visually-hidden">Укажите ваш номер телефона.</span>
+                <input class="form__input form__input--tel" type="tel" name="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+                <svg class="form__contact-image" width="25" height="24" opacity="0.2" role="img" aria-hidden="true" focusable="false">
+                  <use xlink:href="./img/sprite.svg#tel"></use>
+                </svg>
+              </label>
+            </div>
+
+            <div class="form__label form__label--email">
+              <h3 class="form__title form__title--email">E-mail</h3>
+              <label class="form__label-wrapper">
+                <span class="visually-hidden">Укажите ваш e-mail.</span>
+                <input class="form__input" type="email" name="email" placeholder="Ваш Email*" required>
+                <svg class="form__contact-image" width="32" height="21" opacity="0.2" role="img" aria-hidden="true" focusable="false">
+                  <use xlink:href="./img/sprite.svg#post"></use>
+                </svg>
+              </label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="form__fieldset form__fieldset--other">
+          <div class="form__container container">
+            <h3 class="form__title form__title--other">Доп</h3>
+            <label class="form__label">
+              <span class="visually-hidden">Опишите все ваши пожелания к заказу.</span>
+              <textarea class="form__input form__input--comment" name="wishes" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            </label>
+          </div>
+        </fieldset>
+        <div class="form__container form__container--bottom container">
+          <p class="form__important">*Поля обязательны для заполнения</p>
+          <button class="form__button button" type="submit">Отправить заказ</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__container container">
+      <a class="footer__logo" href="./index.html">
+        <span class="visually-hidden">Переход на главную страницу.</span>
+        <svg width="102" height="35" role="img" aria-label="Логотип магазина Мишка." focusable="false">
+          <use xlink:href="./img/sprite.svg#logo"></use>
+        </svg>
+      </a>
+      <ul class="footer__social social-list reset-list">
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy" target="_blank">
+            <svg width="28" height="23" role="img" aria-label="Переход на страницу Вконтакте HTML Academy." focusable="false">
+              <use xlink:href="./img/sprite.svg#vk"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
+            <svg width="25" height="22" role="img" aria-label="Переход на канал Ютуб HTML Academy." focusable="false">
+              <use xlink:href="./img/sprite.svg#youtube"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link-tg" href="https://t.me/htmlacademy" target="_blank">
+            <svg width="26" height="20" role="img" aria-label="Переход на канал Телеграм HTML Academy." focusable="false">
+              <use xlink:href="./img/sprite.svg#tg"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <div class="footer__academy academy">
+        <span class="academy__text">Разработано</span>
+        <a class="academy__logo" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+          <svg width="27" height="35" role="img" aria-label="Переход на страницу курса по адаптивной верстке на сайт HTML Academy." focusable="false">
+            <use xlink:href="./img/sprite.svg#academy-logo"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+  <script src="./js/script-burger.js"></script>
+</body>
+</html>
