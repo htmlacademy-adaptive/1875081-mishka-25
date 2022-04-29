@@ -72,7 +72,7 @@
 
     &::after {
       height: 16px;
-      background-size: contain;
+      background-size: 768px;
     }
   }
 
@@ -157,6 +157,7 @@
     &::after {
       width: 1050px;
       height: 23px;
+      background-size: contain;
     }
   }
 

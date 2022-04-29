@@ -36,6 +36,7 @@
 
     &::after {
       height: 17px;
+      background-size: 768px;
     }
 
     @media (min-resolution: 2dppx) {
@@ -78,6 +79,7 @@
   .reviews {
     &::after {
       height: 23px;
+      background-size: contain;
     }
   }
 
