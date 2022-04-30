@@ -7,9 +7,10 @@ modalContent.onclick = function(evt) {
 }
 
 modalWindow.onclick = function(evt) {
-  modalWindow.classList.add('modal--close')
+  modalWindow.classList.add('modal--close');
 }
 
 modalButton.onclick = function () {
+  modalButton.removeAttribute('href');
   modalWindow.classList.remove('modal--close');
 }
