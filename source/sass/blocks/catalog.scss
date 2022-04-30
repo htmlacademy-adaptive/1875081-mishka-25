@@ -1,11 +1,11 @@
 .catalog__list {
   display: grid;
-  gap: 30px;
+  row-gap: 30px;
 }
 
 .catalog__product {
-  width: 260px;
   margin: 0 auto;
+  width: 100%;
 }
 
 

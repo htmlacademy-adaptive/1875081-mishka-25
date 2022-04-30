@@ -49,12 +49,13 @@
 
 .video__image {
   display: block;
-  margin: 0;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
   .video__image {
-    width: 100%;
+    width: 668px;
     height: 455px;
   }
 

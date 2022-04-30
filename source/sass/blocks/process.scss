@@ -1,7 +1,6 @@
 .process__container {
   box-sizing: border-box;
   border: 1px solid #ececec;
-  width: 260px;
   padding: 21px 0 33px;
 
   &:hover {
@@ -14,19 +13,20 @@
 }
 
 .process__title {
-  position: relative;
-  margin: 0 0 26px;
-  padding-left: 91px;
+  display: grid;
+  grid-template-columns: 32px auto;
+  column-gap: 25px;
+  align-items: center;
+  width: 75%;
+  margin: 0 auto 26px;
 
   @include fonts(700, 17px, $color-general, 141%);
 
   &::before {
     content: "";
-    position: absolute;
-    top: 0;
-    left: 34px;
+    display: block;
     width: 32px;
-    height: 48px;
+    height: 22px;
     background-image: url("../img/icon/video.svg");
     background-repeat: no-repeat;
     background-position: center;
@@ -34,7 +34,7 @@
 }
 
 .process__description {
-  width: 195px;
+  width: 75%;
   margin: 35px auto 41px;
 
   @include fonts(400, 13px, $color-secondary, 185%);
@@ -42,7 +42,7 @@
 
 .process__button {
   display: block;
-  width: 192px;
+  width: 74.5%;
   margin: 0 auto;
   padding: 14px 15px;
   text-decoration: none;
@@ -51,32 +51,26 @@
 @media (min-width: 768px) {
   .process__container {
     display: grid;
-    width: 668px;
     padding: 0 0 46px;
   }
 
   .process__video {
     width: 100%;
-    margin-bottom: 38px;
+    margin-bottom: 41px;
   }
 
   .process__title {
+    column-gap: 33px;
+    align-items: start;
     grid-row: 2/3;
-    padding-top: 3px;
-    padding-left: 107px;
-    margin: 0;
+    width: 87.57%;
     margin-bottom: 23px;
 
     @include fonts(700, 20px, $color-general, 120%);
-
-    &::before {
-      left: 42px;
-      background-position: 0 0;
-    }
   }
 
   .process__description {
-    width: 585px;
+    width: 87.57%;
     margin-top: 0;
     margin-bottom: 41px;
 
@@ -110,11 +104,13 @@
 
   .process__title {
     grid-area: title;
+    grid-template-columns: auto;
+    row-gap: 27px;
     margin: 47px 110px 27px 78px;
-    padding-top: 49px;
     padding-left: 0;
     padding-bottom: 0;
     box-sizing: border-box;
+    width: auto;
 
     &::before {
       left: 0;
