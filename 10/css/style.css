@@ -112,35 +112,12 @@
   overflow-x: hidden;
 }
 
-.header__logo-wrapper {
-  display: flex;
-  justify-content: center;
-  padding: 21px 60px 18px;
-  border-top: 1px solid #ececec;
-  border-bottom: 1px solid #ececec;
-}
-
 @media (min-width: 768px) {
   .header {
     background-color: #f1f1f1;
   }
   .header--index {
     background-color: #f9f9f9;
-  }
-
-  .header__logo-wrapper {
-    position: absolute;
-    z-index: 1;
-    padding: 21px 50px;
-    border: none;
-  }
-}
-@media (min-width: 1150px) {
-  .header__logo-wrapper {
-    top: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 5px 10px;
   }
 }
 .logo {
@@ -163,7 +140,7 @@
 
 @media (min-width: 768px) {
   .logo {
-    width: 100%;
+    justify-content: flex-start;
   }
 
   .logo__image {
@@ -172,18 +149,30 @@
   }
 }
 @media (min-width: 1150px) {
+  .logo {
+    width: 100%;
+  }
+
   .logo__image {
     width: 149px;
     height: 72px;
   }
 }
-.main-nav__menu {
+.main-nav__logo-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 21px 60px 18px;
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+}
+
+.main-nav__list {
   background-color: #ffffff;
 }
-.main-nav__menu--hidden {
+.main-nav__list--hidden {
   display: none;
 }
-.main-nav__menu--js {
+.main-nav__list--js {
   position: absolute;
   z-index: 1;
   top: 80px;
@@ -271,38 +260,37 @@
 }
 
 @media (min-width: 768px) {
-  .main-nav__toggle {
-    display: none;
+  .main-nav {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 48.1% 1fr;
+    grid-template-areas: "logo users" "listgeneral delivery";
   }
 
-  .main-nav__menu {
-    background-color: transparent;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .main-nav__menu--js {
-    position: static;
-    z-index: 0;
+  .main-nav__logo-wrapper {
+    grid-area: logo;
+    padding: 22px 50px 16px;
+    justify-content: flex-start;
+    border-top: none;
+    background-color: #ffffff;
   }
 
   .main-nav__list {
+    grid-area: listgeneral;
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
-    width: 50%;
-    order: 2;
     padding-left: 50px;
+    background-color: transparent;
   }
 
   .main-nav__users-menu {
+    grid-area: users;
     display: flex;
-    flex-wrap: wrap;
     justify-content: flex-end;
+    flex-wrap: wrap;
     box-sizing: border-box;
-    width: 100%;
     padding-right: 50px;
-    padding-left: 210px;
-    order: 1;
     border-bottom: 1px solid #ececec;
     background-color: #ffffff;
   }
@@ -314,13 +302,13 @@
     border-left: 1px solid #ececec;
   }
   .main-nav__item--general:nth-child(odd) {
-    margin-right: 16px;
+    margin-right: 23px;
   }
 
   .main-nav__link {
     box-sizing: border-box;
     height: 100%;
-    padding: 20px 20px 20px 0;
+    padding: 20px 14px 20px 0;
   }
   .main-nav__link--basket {
     padding: 33px 0 31px 83px;
@@ -362,28 +350,30 @@
   }
 
   .main-nav__delivery {
+    grid-area: delivery;
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
     align-items: center;
     box-sizing: border-box;
-    width: 50%;
-    order: 3;
     padding: 20px 50px;
   }
 }
 @media (min-width: 1150px) {
   .main-nav {
+    grid-template-columns: 500px auto 1fr;
+    grid-template-areas: "listgeneral logo users" "newmenu . delivery";
     width: 1150px;
     margin: 0 auto;
+  }
+
+  .main-nav__logo-wrapper {
+    padding: 10px 0 2px;
   }
 
   .main-nav__list {
     position: relative;
     box-sizing: border-box;
-    width: 50%;
-    padding-right: 60px;
-    order: 0;
     background-color: #ffffff;
     border-bottom: 1px solid #ececec;
   }
@@ -401,10 +391,6 @@
   .main-nav__users-menu {
     position: relative;
     box-sizing: border-box;
-    padding-left: 120px;
-    padding-right: 50px;
-    width: 50%;
-    order: 0;
   }
   .main-nav__users-menu::after {
     content: "";
@@ -418,11 +404,10 @@
   }
 
   .main-nav__new-menu {
-    position: relative;
+    grid-area: newmenu;
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
-    width: 50%;
     padding-left: 50px;
     padding-right: 50px;
   }
@@ -440,7 +425,7 @@
     align-items: center;
   }
   .main-nav__link--basket {
-    padding-left: 85px;
+    padding-left: 84px;
   }
   .main-nav__link--medium {
     padding: 20px 35px 19px 0;
