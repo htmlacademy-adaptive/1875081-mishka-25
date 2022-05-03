@@ -5,15 +5,31 @@
 
 .footer__container {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-top: 25px;
 }
 
 .footer__logo {
   display: none;
+
+  &[href]:hover {
+    fill: $color-light-accent;
+  }
+
+  &[href]:focus-visible {
+    outline: 1px solid $color-light-accent;
+    outline-offset: 2px;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
 }
 
 .footer__social {
-  margin: 0 auto 28px;
+  margin: 0 auto 22px;
 }
 
 @media (min-width: 768px) {
@@ -26,16 +42,9 @@
     display: block;
   }
 
-  .footer__logo:hover svg {
-    fill: $color-light-accent;
-  }
-
-  .footer__logo:active svg {
-    opacity: 0.3;
-  }
-
   .footer__container {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     padding-top: 0;
 

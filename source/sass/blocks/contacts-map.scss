@@ -1,17 +1,59 @@
 .contacts-map {
-  display: block;
-  border: none;
-  width: 100%;
+  position: relative;
+}
+
+.contacts-map__image-wrapper {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-35%, -80%);
+    width: 67px;
+    height: 100px;
+    background-image: url("../img/icon/map-pin.svg");
+  }
+
+  &--js {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+  }
 }
 
 .contacts-map__image {
   display: block;
-  margin-bottom: 0;
+  margin: 0 auto;
+  max-width: 100%;
   object-fit: contain;
 }
 
+.contacts-map__interactive {
+  display: block;
+  width: 100%;
+  height: 455px;
+  border: none;
+
+  &--nojs {
+    display: none;
+  }
+}
+
 @media (min-width: 768px) {
-  .contacts-map {
+  .contacts-map__image {
+    width: 100%;
     height: 457px;
+  }
+
+  .contacts-map__interactive {
+    height: 100%;
+  }
+}
+
+@media (min-width: 1150px) {
+  .contacts-map__image {
+    width: 527px;
   }
 }

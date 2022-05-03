@@ -1,9 +1,17 @@
 .social-list {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 142px;
+  flex-wrap: wrap;
+  width: 143px;
   padding: 2px 0;
+}
+
+.social-list__item {
+  margin-bottom: 5px;
+
+  &:not(:nth-child(3n)) {
+    margin-right: 29px;
+  }
 }
 
 .social-list__link {
@@ -15,6 +23,11 @@
 
   &:hover {
     fill: $color-light-accent;
+  }
+
+  &:focus-visible {
+    outline: 1px solid $color-light-accent;
+    outline-offset: 2px;
   }
 
   &:active {

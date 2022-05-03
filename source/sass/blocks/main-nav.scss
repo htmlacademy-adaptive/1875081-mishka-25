@@ -1,21 +1,34 @@
+.main-nav {
+  min-height: 80px;
+}
+
 .main-nav__menu {
-  background-color: #ffffff;
-
-  &--hidden {
-    display: none;
-  }
-
   &--js {
     position: absolute;
     z-index: 1;
-    top: 80px;
+    top: 0;
     left: 0;
     width: 100%;
+    background-color: #ffffff;
   }
+}
+
+.main-nav__menu--hidden .main-nav__list,
+.main-nav__menu--hidden .main-nav__users-menu {
+  display: none;
+}
+
+.main-nav__logo-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 21px 60px 18px;
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
 }
 
 .main-nav__toggle {
   position: absolute;
+  z-index: 2;
   top: 26px;
   right: 28px;
 
@@ -60,6 +73,10 @@
     color: rgba(0, 0, 0, 0.6);
   }
 
+  &[href]:focus-visible {
+    outline: 1px solid $color-light-accent;
+  }
+
   &[href]:active {
     color: rgba(0, 0, 0, 0.3);
   }
@@ -90,40 +107,37 @@
 }
 
 @media (min-width: 768px) {
-  .main-nav__toggle {
-    display: none;
+  .main-nav__menu {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 48.1% 1fr;
+    grid-template-areas: "logo users" "listgeneral delivery";
   }
 
-  .main-nav__menu {
-    background-color: transparent;
-
-    &--js {
-      position: static;
-      z-index: 0;
-    }
-
-    display: flex;
-    flex-wrap: wrap;
+  .main-nav__logo-wrapper {
+    grid-area: logo;
+    padding: 22px 50px 16px;
+    justify-content: flex-start;
+    border-top: none;
+    background-color: #ffffff;
   }
 
   .main-nav__list {
+    grid-area: listgeneral;
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
-    width: 50%;
-    order: 2;
     padding-left: 50px;
+    background-color: transparent;
   }
 
   .main-nav__users-menu {
+    grid-area: users;
     display: flex;
-    flex-wrap: wrap;
     justify-content: flex-end;
+    flex-wrap: wrap;
     box-sizing: border-box;
-    width: 100%;
     padding-right: 50px;
-    padding-left: 210px;
-    order: 1;
     border-bottom: 1px solid #ececec;
     background-color: #ffffff;
   }
@@ -136,14 +150,14 @@
     }
 
     &--general:nth-child(odd) {
-      margin-right: 16px;
+      margin-right: 23px;
     }
   }
 
   .main-nav__link {
     box-sizing: border-box;
     height: 100%;
-    padding: 20px 20px 20px 0;
+    padding: 20px 14px 20px 0;
 
     &--basket {
       padding: 33px 0 31px 83px;
@@ -184,29 +198,32 @@
   }
 
   .main-nav__delivery {
+    grid-area: delivery;
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
     align-items: center;
     box-sizing: border-box;
-    width: 50%;
-    order: 3;
     padding: 20px 50px;
   }
 }
 
 
 @media (min-width: 1150px) {
-  .main-nav {
+  .main-nav__menu {
+    grid-template-columns: 500px auto 1fr;
+    grid-template-areas: "listgeneral logo users" "newmenu . delivery";
     width: 1150px;
     margin: 0 auto;
+  }
+
+  .main-nav__logo-wrapper {
+    padding: 10px 0 2px;
   }
 
   .main-nav__list {
     position: relative;
     box-sizing: border-box;
-    width: 50%;
-    order: 0;
     background-color: #ffffff;
     border-bottom: 1px solid #ececec;
 
@@ -214,9 +231,9 @@
       content: "";
       position: absolute;
       top: 0;
-      right: 575px;
+      right: 100%;
       height: 100%;
-      width: calc(50vw - 575px);
+      width: calc(50vw - 100%);
       background-color: #ffffff;
       border-bottom: 1px solid #ececec;
     }
@@ -225,29 +242,24 @@
   .main-nav__users-menu {
     position: relative;
     box-sizing: border-box;
-    padding-left: 120px;
-    padding-right: 50px;
-    width: 50%;
-    order: 0;
 
     &::after {
       content: "";
       position: absolute;
       top: 0;
-      left: 575px;
+      left: 100%;
       height: 100%;
-      width: calc(50vw - 575px);
+      width: calc(50vw - 100%);
       background-color: #ffffff;
       border-bottom: 1px solid #ececec;
     }
   }
 
   .main-nav__new-menu {
-    position: relative;
+    grid-area: newmenu;
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
-    width: 50%;
     padding-left: 50px;
     padding-right: 50px;
   }
@@ -268,7 +280,7 @@
     align-items: center;
 
     &--basket {
-      padding-left: 85px;
+      padding-left: 84px;
     }
 
     &--medium {

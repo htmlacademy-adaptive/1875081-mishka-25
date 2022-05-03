@@ -41,7 +41,9 @@
     padding: 37px 0 113px;
 
     &::after {
-      height: 34px;
+      height: 30px;
+      background-size: 1250px;
+      background-position-x: 12px;
     }
   }
 

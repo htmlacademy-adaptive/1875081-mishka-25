@@ -71,8 +71,8 @@
     padding-bottom: 69px;
 
     &::after {
-      height: 17px;
-      background-size: contain;
+      height: 16px;
+      background-size: 768px;
     }
   }
 
@@ -155,9 +155,9 @@
     padding-bottom: 97px;
 
     &::after {
-      left: 4.35%;
-      width: 91.3%;
+      width: 1050px;
       height: 23px;
+      background-size: contain;
     }
   }
 
@@ -202,6 +202,7 @@
     grid-column: 3/4;
     grid-row: 1/6;
     margin-bottom: auto;
+    height: 100%;
   }
 
   .product-week__image {

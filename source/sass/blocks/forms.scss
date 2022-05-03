@@ -23,6 +23,7 @@
   margin: 0;
   margin-bottom: 30px;
   width: 100%;
+  word-break: break-all;
   background-color: #ffffff;
 
   @include fonts(700, 17px, $color-light-accent, 110%);
@@ -110,6 +111,10 @@
       border-color: rgba(0, 0, 0, 0.3);
     }
   }
+}
+
+.form__label-wrapper {
+  position: relative;
 }
 
 .form__input {
@@ -210,9 +215,14 @@
     }
   }
 
-  &:focus {
+  &:focus-visible {
     border-color: $color-light-accent;
     outline: none;
+
+    + .form__mark {
+      outline: 1px solid $color-light-accent;
+      outline-offset: 2px;
+    }
 
     + .form__contact-image {
       fill: $color-light-accent;
@@ -230,7 +240,7 @@
   position: absolute;
   bottom: 50%;
   right: 5px;
-  transform: translateY(95%);
+  transform: translateY(50%);
 }
 
 .form__mark {
@@ -299,7 +309,7 @@
     }
 
     &--bottom {
-      grid-template-columns: 230px 1fr;
+      grid-template-columns: auto 1fr;
     }
   }
 
@@ -345,13 +355,16 @@
     }
   }
 
-  .form__title::after {
-    content: none;
-  }
-
   .form__title {
     margin-block-start: 1em;
     background-color: transparent;
+    align-items: baseline;
+    padding-right: 15px;
+    box-sizing: border-box;
+
+    &::after {
+      content: none;
+    }
   }
 
   .form__mark {
@@ -392,11 +405,11 @@
 
   .form__contact-image {
     right: 23px;
-    transform: translateY(50%);
   }
 
   .form__important {
     margin: auto 0 auto auto;
+    padding-left: 50px;
     grid-column: 2/3;
     grid-row: 1/2;
 
@@ -436,7 +449,7 @@
     }
 
     &--bottom {
-      grid-template-columns: 230px 1fr;
+      grid-template-columns: auto 1fr;
     }
   }
 

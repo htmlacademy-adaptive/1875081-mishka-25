@@ -4,8 +4,10 @@
   justify-content: center;
   padding-top: 22px;
   border-top: 1px solid #e5e5e5;
+  width: 100%;
 
   @include fonts (700, 19px, $color-general, 100%);
+  word-break: break-all;
 }
 
 .academy__text {
@@ -15,24 +17,33 @@
 .academy__logo {
   display: flex;
   align-items: center;
+  text-decoration: none;
+  color: inherit;
   fill: $color-light-accent;
+
+  &:hover {
+    fill: $color-dark-accent;
+  }
+
+  &:focus-visible {
+    outline: 1px solid $color-light-accent;
+    outline-offset: 2px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: 768px) {
   .academy {
+    width: auto;
+    max-width: 183px;
     padding-top: 0;
     border-top: none;
   }
 
   .academy__text {
     margin-right: 28px;
-  }
-
-  .academy__logo:hover {
-    fill: $color-dark-accent;
-  }
-
-  .academy__logo:active {
-    opacity: 0.3;
   }
 }

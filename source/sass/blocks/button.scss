@@ -21,6 +21,11 @@
     background-color: $color-secondary;
   }
 
+  &:focus-visible {
+    outline: 1px solid $color-light-accent;
+    outline-offset: 2px;
+  }
+
   &:active {
     color: rgba(255, 255, 255, 0.3);
     background-color: $color-secondary;

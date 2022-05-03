@@ -12,6 +12,7 @@ for (let modalButton of modalButtons) {
   }
 
   modalButton.onclick = function () {
+    modalButton.removeAttribute('href');
     modalWindow.classList.remove('modal--close');
   }
 }
