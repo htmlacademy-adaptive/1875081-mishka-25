@@ -8,7 +8,11 @@
   <link rel="icon" href="./img/favicons/favicon-152.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="./img/favicons/apple-icon-180x180.png">
   <link rel="manifest" href="./manifest.webmanifest">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="preload" href="./fonts/opensans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/opensansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/opensans.woff" type="font/woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/opensansbold.woff" type="font/woff" as="font" crossorigin="anonymous">
 </head>
 <body class="page__body">
   <header class="page__header header header--index">
@@ -22,7 +26,7 @@
             <picture>
               <source media="(min-width: 1150px)" srcset="./img/content/mishka-logo-desktop.svg">
               <source media="(min-width: 768px)" srcset="./img/content/mishka-logo-tablet.svg">
-              <img class="logo__image" src="./img/content/mishka-logo-mobile.svg" width="86" height="35" alt="Магазин игрушек ручной работы Мишка.">
+              <img class="logo__image" src="./img/content/mishka-logo-mobile.svg" loading="lazy" width="86" height="35" alt="Магазин игрушек ручной работы Мишка.">
             </picture>
           </a>
         </div>
@@ -116,7 +120,7 @@
 
             <source media="(min-width: 1150px)" srcset="./img/content/product-week-desktop.jpg 1x, ./img/content/product-week-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="./img/content/product-week-tablet.jpg 1x, ./img/content/product-week-tablet@2x.jpg 2x">
-            <img class="product-week__image" src="./img/content/product-week.jpg" srcset="./img/content/product-week@2x.jpg 2x" width="260" height="315" alt="Товар недели: вязаные корзинки.">
+            <img class="product-week__image" src="./img/content/product-week.jpg" srcset="./img/content/product-week@2x.jpg 2x" loading="lazy" width="260" height="315" alt="Товар недели: вязаные корзинки.">
           </picture>
         </div>
         <p class="product-week__price">Цена: <span class="product-week__value">990 руб.</span></p>
@@ -195,13 +199,13 @@
       <div class="contacts__map contacts-map">
         <div class="contacts-map__image-wrapper">
           <picture>
-            <source type="image/webp" media="(min-width: 1150px)" srcset="./img/content/map-desktop.webp 1x, ./img/content/map-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="./img/content/map-tablet.webp 1x, ./img/content/map-tablet@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1150px)" srcset="./img/content/map-desktop@1x.webp 1x, ./img/content/map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="./img/content/map-tablet@1x.webp 1x, ./img/content/map-tablet@2x.webp 2x">
             <source type="image/webp" srcset="./img/content/map-mobile@1x.webp 1x, ./img/content/map-mobile@2x.webp 2x">
 
             <source media="(min-width: 1150px)" srcset="./img/content/map-desktop@1x.png 1x, ./img/content/map-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="./img/content/map-tablet@1x.png 1x, ./img/content/map-tablet@2x.png 2x">
-            <img class="contacts-map__image" src="./img/content/map-mobile@1x.png" srcset="./img/content/map-mobile@2x.png 2x" width="320" height="455" alt="Мы на карте: г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101">
+            <img class="contacts-map__image" src="./img/content/map-mobile@1x.png" srcset="./img/content/map-mobile@2x.png 2x" loading="lazy" width="320" height="455" alt="Мы на карте: г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101">
           </picture>
         </div>
 
