@@ -3,8 +3,31 @@
 }
 
 .slider__item {
-  &--hidden {
-    display: none;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+
+  &--current {
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+    animation: appear 500ms linear;
+  }
+
+  @keyframes appear {
+    0% {
+      opacity: 0;
+      position: relative;
+      left: -500px;
+    }
+
+    100% {
+      opacity: 1;
+      position: relative;
+      left: 0;
+    }
+
   }
 }
 

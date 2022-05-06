@@ -1,6 +1,7 @@
 .reviews {
   position: relative;
   padding-bottom: 51px;
+  overflow: hidden;
 
   &::after {
     content: "";
